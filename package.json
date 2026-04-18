@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "description": "CLI + web dashboard tool that scans codebases and generates AI-friendly context",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
