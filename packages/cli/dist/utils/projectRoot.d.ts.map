@@ -1,0 +1,1 @@
+{"version":3,"file":"projectRoot.d.ts","sourceRoot":"","sources":["../../src/utils/projectRoot.ts"],"names":[],"mappings":"AAEA,sFAAsF;AACtF,wBAAgB,gBAAgB,CAAC,OAAO,EAAE;IACxC,GAAG,CAAC,EAAE,MAAM,CAAC;IACb,IAAI,CAAC,EAAE,MAAM,CAAC;CACf,GAAG,MAAM,GAAG,SAAS,CAErB;AAED;;GAEG;AACH,wBAAgB,kBAAkB,CAChC,cAAc,EAAE,MAAM,GAAG,SAAS,EAClC,SAAS,EAAE,MAAM,GAAG,SAAS,GAC5B,MAAM,CAER"}

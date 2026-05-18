@@ -2,17 +2,25 @@
 
 import { Sidebar } from '@/components/Sidebar';
 import { GraphView } from '@/components/GraphView';
-import { readProjectIndex } from '@/lib/readContext';
+import { fetchProjectIndex } from '@/lib/readContext';
+import type { ProjectIndex } from '@codecontext/core';
 import { useEffect, useState } from 'react';
 
 export default function GraphPage() {
-  const [project, setProject] = useState(null);
+  const [project, setProject] = useState<ProjectIndex | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const projectData = readProjectIndex();
-    setProject(projectData);
-    setIsLoading(false);
+    let cancelled = false;
+    fetchProjectIndex().then((p) => {
+      if (!cancelled) {
+        setProject(p);
+        setIsLoading(false);
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   return (

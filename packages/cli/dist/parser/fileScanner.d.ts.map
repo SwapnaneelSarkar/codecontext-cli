@@ -1,0 +1,1 @@
+{"version":3,"file":"fileScanner.d.ts","sourceRoot":"","sources":["../../src/parser/fileScanner.ts"],"names":[],"mappings":"AAyCA,MAAM,WAAW,WAAW;IAC1B,cAAc,CAAC,EAAE,OAAO,CAAC;CAC1B;AAED;;GAEG;AACH,wBAAgB,iBAAiB,CAAC,iBAAiB,EAAE,MAAM,EAAE,QAAQ,EAAE,MAAM,GAAG,OAAO,CAgCtF;AAsBD;;GAEG;AACH,wBAAsB,SAAS,CAC7B,SAAS,EAAE,MAAM,EACjB,OAAO,GAAE,WAAgB,GACxB,OAAO,CAAC,MAAM,EAAE,CAAC,CA2CnB"}

@@ -1,0 +1,85 @@
+{
+  "filePath": "src/summarizer/llmSummarizer.ts",
+  "language": "TypeScript",
+  "purpose": "Rough USD estimate (order-of-magnitude; update with current pricing).",
+  "exports": [
+    "estimateCostUsd",
+    "summarizeFileContext",
+    "summarizeFiles"
+  ],
+  "imports": [
+    "@anthropic-ai/sdk",
+    "openai",
+    "fs",
+    "path",
+    "zod",
+    "@codecontext/core",
+    "../utils/hash"
+  ],
+  "functions": [
+    "loadCache",
+    "saveCache",
+    "cacheKey",
+    "estimateCostUsd",
+    "callAnthropic",
+    "callOpenAI",
+    "buildUserPayload",
+    "parseJsonLoose",
+    "summarizeFileContext",
+    "summarizeFiles"
+  ],
+  "dependencies": [
+    "@anthropic-ai/sdk",
+    "openai",
+    "fs",
+    "path",
+    "zod",
+    "@codecontext/core"
+  ],
+  "dbAccess": [
+    "raw_sql"
+  ],
+  "apiUsage": [],
+  "summary": "TypeScript file, 281 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [
+    {
+      "specifier": "@anthropic-ai/sdk",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "openai",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "fs",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "path",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "zod",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "@codecontext/core",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "../utils/hash",
+      "resolvedPath": null,
+      "isDynamic": false
+    }
+  ],
+  "contentHash": "da2cdfec406ea0feebae1c979f2b3e475070ff994345d309a0476dfca147ac34"
+}

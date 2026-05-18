@@ -1,0 +1,71 @@
+{
+  "filePath": "src/parser/astParser.ts",
+  "language": "TypeScript",
+  "purpose": "Source file (1 exports)",
+  "exports": [
+    "parseFilesAST"
+  ],
+  "imports": [
+    "fs",
+    "path",
+    "@codecontext/core",
+    "../utils/hash",
+    "./heuristics",
+    "./regexExtract",
+    "./treeSitterOptional"
+  ],
+  "functions": [
+    "firstCommentPurpose",
+    "buildImportRecords",
+    "parseFilesAST"
+  ],
+  "dependencies": [
+    "fs",
+    "path",
+    "@codecontext/core"
+  ],
+  "dbAccess": [],
+  "apiUsage": [],
+  "summary": "TypeScript file, 142 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [
+    {
+      "specifier": "fs",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "path",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "@codecontext/core",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "../utils/hash",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "./heuristics",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "./regexExtract",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "./treeSitterOptional",
+      "resolvedPath": null,
+      "isDynamic": false
+    }
+  ],
+  "contentHash": "47f1a0470ff23419e0ae77bcc4ce9a149371ce7b845a83198fa84d950fdea2cd"
+}

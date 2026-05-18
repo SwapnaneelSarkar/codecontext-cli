@@ -1,0 +1,60 @@
+{
+  "filePath": "src/writer/contextWriter.ts",
+  "language": "TypeScript",
+  "purpose": "Write generated context to .ai-context/ folder",
+  "exports": [
+    "writeContext"
+  ],
+  "imports": [
+    "fs",
+    "path",
+    "@codecontext/core",
+    "../utils/hash",
+    "../utils/cliVersion"
+  ],
+  "functions": [
+    "buildContextMd",
+    "buildCursorRulesFragment",
+    "buildClaudeMemoryMd",
+    "writeContext"
+  ],
+  "dependencies": [
+    "fs",
+    "path",
+    "@codecontext/core"
+  ],
+  "dbAccess": [],
+  "apiUsage": [],
+  "summary": "TypeScript file, 143 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [
+    {
+      "specifier": "fs",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "path",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "@codecontext/core",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "../utils/hash",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "../utils/cliVersion",
+      "resolvedPath": null,
+      "isDynamic": false
+    }
+  ],
+  "contentHash": "e376c20c7c3d4768d50c64f70a50516eb0d7978a3330f822fed54a17c00a3064"
+}

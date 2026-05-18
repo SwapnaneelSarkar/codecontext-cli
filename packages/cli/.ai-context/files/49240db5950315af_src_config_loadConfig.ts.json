@@ -1,0 +1,46 @@
+{
+  "filePath": "src/config/loadConfig.ts",
+  "language": "TypeScript",
+  "purpose": "Source file (1 exports)",
+  "exports": [
+    "loadProjectConfig"
+  ],
+  "imports": [
+    "fs",
+    "path",
+    "@codecontext/core"
+  ],
+  "functions": [
+    "loadProjectConfig",
+    "deepMerge"
+  ],
+  "dependencies": [
+    "fs",
+    "path",
+    "@codecontext/core"
+  ],
+  "dbAccess": [],
+  "apiUsage": [],
+  "summary": "TypeScript file, 39 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [
+    {
+      "specifier": "fs",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "path",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "@codecontext/core",
+      "resolvedPath": null,
+      "isDynamic": false
+    }
+  ],
+  "contentHash": "5826de65134e612e21d1dd67c42d9ee379076c9553dd347263289b08265057d8"
+}

@@ -1,0 +1,22 @@
+{
+  "filePath": "src/bar.ts",
+  "language": "TypeScript",
+  "purpose": "Source file (1 exports)",
+  "exports": [
+    "bar"
+  ],
+  "imports": [],
+  "functions": [
+    "bar"
+  ],
+  "dependencies": [],
+  "dbAccess": [],
+  "apiUsage": [],
+  "summary": "TypeScript file defining `bar`. Imports from local/relative paths only. Contains 1 functions (`bar`).",
+  "diagnostics": [
+    "tree-sitter:typescript:ok",
+    "ollama:skipped"
+  ],
+  "importRecords": [],
+  "contentHash": "8a58a602dbe9b39f0e72f0c5b942ff9feacbc3718bd5e8b189c712a7e6f8c061"
+}

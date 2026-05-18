@@ -1,0 +1,27 @@
+{
+  "filePath": "src/parser/regexExtract.ts",
+  "language": "TypeScript",
+  "purpose": "Portable extraction when Tree-sitter is unavailable or as supplement.",
+  "exports": [
+    "extractJsTsLike",
+    "extractPython",
+    "extractGo"
+  ],
+  "imports": [],
+  "functions": [
+    "npmPackageName",
+    "extractJsTsLike",
+    "extractPython",
+    "extractGo",
+    "pushImp"
+  ],
+  "dependencies": [],
+  "dbAccess": [],
+  "apiUsage": [],
+  "summary": "TypeScript file, 176 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [],
+  "contentHash": "9a5fda9d24153fa84174b9c83642e2b896293ce3b63149dd3520ce544c0541ff"
+}

@@ -1,0 +1,61 @@
+{
+  "filePath": "src/commands/init.ts",
+  "language": "TypeScript",
+  "purpose": "Source file (0 exports)",
+  "exports": [],
+  "imports": [
+    "commander",
+    "chalk",
+    "../utils/spinner",
+    "fs",
+    "path",
+    "@codecontext/core"
+  ],
+  "functions": [],
+  "dependencies": [
+    "commander",
+    "chalk",
+    "fs",
+    "path",
+    "@codecontext/core"
+  ],
+  "dbAccess": [],
+  "apiUsage": [],
+  "summary": "TypeScript file, 64 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [
+    {
+      "specifier": "commander",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "chalk",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "../utils/spinner",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "fs",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "path",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "@codecontext/core",
+      "resolvedPath": null,
+      "isDynamic": false
+    }
+  ],
+  "contentHash": "5e68debf7b2542b9943d4afe461255db089b25c3d57731b056ac1f907172f199"
+}

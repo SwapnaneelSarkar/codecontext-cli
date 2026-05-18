@@ -1,0 +1,56 @@
+{
+  "filePath": "src/parser/treeSitterOptional.ts",
+  "language": "TypeScript",
+  "purpose": "Optional Tree-sitter parse (native bindings). Validates grammars load; extraction uses regex.",
+  "exports": [
+    "tryParseWithTreeSitter",
+    "tryParsePythonTreeSitter",
+    "tryParseGoTreeSitter"
+  ],
+  "imports": [
+    "tree-sitter",
+    "tree-sitter-typescript",
+    "tree-sitter-python",
+    "tree-sitter-go"
+  ],
+  "functions": [
+    "tryParseWithTreeSitter",
+    "tryParsePythonTreeSitter",
+    "tryParseGoTreeSitter"
+  ],
+  "dependencies": [
+    "tree-sitter",
+    "tree-sitter-typescript",
+    "tree-sitter-python",
+    "tree-sitter-go"
+  ],
+  "dbAccess": [],
+  "apiUsage": [],
+  "summary": "TypeScript file, 58 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [
+    {
+      "specifier": "tree-sitter",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "tree-sitter-typescript",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "tree-sitter-python",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "tree-sitter-go",
+      "resolvedPath": null,
+      "isDynamic": false
+    }
+  ],
+  "contentHash": "b5383c25d9fe083ec9ab8fb53ea64e1c3b17ebcf6332c934f83056fa50b33070"
+}

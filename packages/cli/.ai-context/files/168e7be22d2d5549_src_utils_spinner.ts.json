@@ -1,0 +1,31 @@
+{
+  "filePath": "src/utils/spinner.ts",
+  "language": "TypeScript",
+  "purpose": "Source file (1 exports)",
+  "exports": [
+    "createSpinner"
+  ],
+  "imports": [
+    "ora"
+  ],
+  "functions": [
+    "createSpinner"
+  ],
+  "dependencies": [
+    "ora"
+  ],
+  "dbAccess": [],
+  "apiUsage": [],
+  "summary": "TypeScript file, 10 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [
+    {
+      "specifier": "ora",
+      "resolvedPath": null,
+      "isDynamic": false
+    }
+  ],
+  "contentHash": "f973073e6e67e21971e8ced392d16effcb6b7bbe8731355e0f4d524b40fc4d54"
+}

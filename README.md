@@ -2,6 +2,8 @@
 
 A full-stack monorepo for a CLI + web dashboard tool that scans local codebases, parses them, and generates AI-friendly structured context. This helps AI coding agents (like Claude Code, Cursor) understand projects faster with fewer tokens.
 
+See **[BRIEF.md](BRIEF.md)** for architecture, CLI workflow, output format, and maturity notes.
+
 ## Features
 
 - **CLI Tool**: Fast codebase scanning with intelligent file filtering
@@ -17,11 +19,11 @@ codecontext/
 ├── packages/
 │   ├── cli/              # Node.js CLI tool (npx codecontext)
 │   │   ├── src/
-│   │   │   ├── commands/ # generate, query, init commands
-│   │   │   ├── parser/   # File scanning and AST parsing (stubbed)
-│   │   │   ├── graph/    # Dependency graph building (stubbed)
+│   │   │   ├── commands/ # init, generate, update, query, stats, dashboard, prompt
+│   │   │   ├── parser/   # File scan, regex + optional Tree-sitter
+│   │   │   ├── graph/    # Dependency graph
 │   │   │   ├── writer/   # Context output writer
-│   │   │   └── summarizer/ # LLM summarization (stubbed)
+│   │   │   └── summarizer/ # LLM summarization (Ollama default, Anthropic / OpenAI)
 │   │   └── package.json
 │   ├── core/             # Shared types and utilities
 │   │   └── src/
@@ -29,7 +31,7 @@ codecontext/
 │   │       └── utils/    # Helper functions
 │   └── dashboard/        # Next.js web application
 │       └── src/
-│           ├── app/      # Pages (home, graph, files)
+│           ├── app/      # Pages (home, graph, files, query) + API routes
 │           ├── components/ # UI components
 │           └── lib/      # Utilities
 ├── turbo.json           # Turborepo configuration
@@ -39,10 +41,10 @@ codecontext/
 
 ## Tech Stack
 
-- **Monorepo**: Turborepo + pnpm workspaces
+- **Monorepo**: Turborepo + npm workspaces (`pnpm` also supported)
 - **Language**: TypeScript throughout
 - **CLI**: Commander.js, Chalk, Ora spinners
-- **Dashboard**: Next.js 14, React 19, Tailwind CSS
+- **Dashboard**: Next.js 14, React 18, Tailwind CSS, React Flow
 - **Types**: Full type safety with shared core package
 
 ## Quick Start
@@ -54,36 +56,49 @@ codecontext/
 ### Installation
 
 ```bash
-# Install dependencies for all packages
-pnpm install
-
-# Build all packages
-pnpm build
-
-# Start development servers
-pnpm dev
+npm install
+npm run build
 ```
+
+Use `pnpm install` / `pnpm build` if you prefer pnpm; set `@codecontext/core` in `packages/cli` and `packages/dashboard` to `workspace:*` when using pnpm workspaces.
+
+## Free LLM Setup (Ollama)
+
+`codecontext` uses **Ollama** by default — no API key needed.
+
+1. Install: `brew install ollama`
+2. Start: `brew services start ollama`
+3. Pull model: `ollama pull codellama`
+4. Run: `codecontext generate /path/to/project`
+
+If Ollama is not running, the CLI prints a short hint and continues with regex-only summaries (same as `--skip-llm`). To use Anthropic or OpenAI instead, set `llm.provider` in `.codecontextrc.json` and use `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`.
 
 ### CLI Usage
 
 ```bash
-# Initialize context folder in a project
-npx @codecontext/cli init
+# From repo after build:
+node packages/cli/dist/index.js init
+node packages/cli/dist/index.js generate --dir ./my-project
+node packages/cli/dist/index.js generate --skip-llm --dir ./my-project   # AST only, no LLM
+node packages/cli/dist/index.js query "authentication"
+node packages/cli/dist/index.js stats --dir ./my-project
+node packages/cli/dist/index.js update --dir ./my-project
+node packages/cli/dist/index.js prompt   # print agent instructions block
 
-# Generate context by scanning a directory
-npx @codecontext/cli generate --dir ./my-project
-
-# Query context (coming soon)
-npx @codecontext/cli query "What does the auth module do?"
+# Dashboard (from monorepo; sets CODECONTEXT_PROJECT_ROOT)
+node packages/cli/dist/index.js dashboard --dir ./my-project
 ```
+
+Default summaries use **local Ollama** (see above). For cloud APIs, set `ANTHROPIC_API_KEY` or `OPENAI_API_KEY` and configure `llm.provider` in `.codecontextrc.json`. See [SPEC.md](SPEC.md) for `.ai-context/` layout.
 
 ### Dashboard
 
-The dashboard starts at `http://localhost:3000` and provides:
+After `codecontext dashboard --dir <project>`, open `http://localhost:3000`. The app reads `.ai-context/index.json` via `/api/context` when `CODECONTEXT_PROJECT_ROOT` is set.
 
 - **Overview**: Project statistics and summary
-- **Dependency Graph**: Visual representation of module relationships
-- **File Browser**: Search and explore individual files with context
+- **Dependency Graph**: Interactive graph (imports / db / api hints)
+- **File Browser**: Search files
+- **Query**: BM25 search over summaries
 
 ## Generated Output
 

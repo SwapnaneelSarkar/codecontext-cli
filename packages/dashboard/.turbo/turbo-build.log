@@ -1,0 +1,37 @@
+
+> @codecontext/dashboard@0.1.0 build /Users/swapnaneelsarkar/Documents/GitHub/codecontext-cli/packages/dashboard
+> next build
+
+  ▲ Next.js 14.2.35
+
+   Creating an optimized production build ...
+(node:95973) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/9) ...
+   Generating static pages (2/9) 
+   Generating static pages (4/9) 
+   Generating static pages (6/9) 
+ ✓ Generating static pages (9/9)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    1.9 kB           99 kB
+├ ○ /_not-found                          880 B          88.4 kB
+├ ƒ /api/context                         0 B                0 B
+├ ƒ /api/query                           0 B                0 B
+├ ○ /files                               2.15 kB        99.2 kB
+├ ○ /graph                               82.7 kB         180 kB
+└ ○ /query                               1.91 kB          99 kB
++ First Load JS shared by all            87.5 kB
+  ├ chunks/1dd3208c-d05cf46ba207be9f.js  53.7 kB
+  ├ chunks/528-f8030a7214d2b47c.js       31.9 kB
+  └ other shared chunks (total)          2 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

@@ -1,0 +1,27 @@
+{
+  "filePath": "src/commands/prompt.ts",
+  "language": "TypeScript",
+  "purpose": "Source file (0 exports)",
+  "exports": [],
+  "imports": [
+    "commander"
+  ],
+  "functions": [],
+  "dependencies": [
+    "commander"
+  ],
+  "dbAccess": [],
+  "apiUsage": [],
+  "summary": "TypeScript file, 10 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [
+    {
+      "specifier": "commander",
+      "resolvedPath": null,
+      "isDynamic": false
+    }
+  ],
+  "contentHash": "e894c3ce0b2032c3e82b0b4bd243d85f7054a35017381c6886b55e9f474ce954"
+}

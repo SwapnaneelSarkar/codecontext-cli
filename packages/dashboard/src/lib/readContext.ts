@@ -1,38 +1,28 @@
-import { ProjectIndex, FileContext } from '@codecontext/core';
+import type { ProjectIndex, ScoredFile } from '@codecontext/core';
 
 /**
- * Read and parse .ai-context/index.json from the project
- * In production, this would load from a specific project directory or server endpoint
+ * Load project index from the Next.js API route (server sets CODECONTEXT_PROJECT_ROOT).
  */
-export function readProjectIndex(): ProjectIndex | null {
-  // Placeholder: In a real app, this would:
-  // 1. Accept a project path or ID
-  // 2. Read the .ai-context/index.json file
-  // 3. Parse and return the ProjectIndex
-  // 4. Cache the result for performance
-
+export async function fetchProjectIndex(): Promise<ProjectIndex | null> {
   try {
-    // For now, return a mock structure
-    return null;
-  } catch (error) {
-    console.error('Error reading project index:', error);
+    const res = await fetch('/api/context', { cache: 'no-store' });
+    if (!res.ok) return null;
+    return (await res.json()) as ProjectIndex;
+  } catch {
     return null;
   }
 }
 
-/**
- * Read a specific file context from .ai-context/files/
- */
-export function readFileContext(fileName: string): FileContext | null {
-  // Placeholder: In a real app, this would:
-  // 1. Read the specific JSON file from .ai-context/files/
-  // 2. Parse and return the FileContext
-  // 3. Cache the result for performance
-
+export async function fetchQueryResults(
+  q: string
+): Promise<{ query: string; results: ScoredFile[] } | null> {
   try {
-    return null;
-  } catch (error) {
-    console.error(`Error reading file context for ${fileName}:`, error);
+    const res = await fetch(`/api/query?q=${encodeURIComponent(q)}`, {
+      cache: 'no-store',
+    });
+    if (!res.ok) return null;
+    return res.json();
+  } catch {
     return null;
   }
 }

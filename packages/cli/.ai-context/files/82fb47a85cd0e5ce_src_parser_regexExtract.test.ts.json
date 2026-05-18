@@ -1,0 +1,44 @@
+{
+  "filePath": "src/parser/regexExtract.test.ts",
+  "language": "TypeScript",
+  "purpose": "Source file (1 exports)",
+  "exports": [
+    "hello"
+  ],
+  "imports": [
+    "vitest",
+    "./regexExtract",
+    "lodash"
+  ],
+  "functions": [
+    "hello"
+  ],
+  "dependencies": [
+    "vitest",
+    "lodash"
+  ],
+  "dbAccess": [],
+  "apiUsage": [],
+  "summary": "TypeScript file, 15 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [
+    {
+      "specifier": "vitest",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "./regexExtract",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "lodash",
+      "resolvedPath": null,
+      "isDynamic": false
+    }
+  ],
+  "contentHash": "dc68394e09c322d49a954d3f1856553a79e2f6f432c4ff247daae2f6d05276d6"
+}

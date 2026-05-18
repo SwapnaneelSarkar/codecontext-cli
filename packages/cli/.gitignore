@@ -1,0 +1,2 @@
+# CodeContext local cache (keep generated JSON if you prefer)
+.ai-context/cache/

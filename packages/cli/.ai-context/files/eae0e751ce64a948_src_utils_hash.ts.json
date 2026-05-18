@@ -1,0 +1,35 @@
+{
+  "filePath": "src/utils/hash.ts",
+  "language": "TypeScript",
+  "purpose": "Source file (2 exports)",
+  "exports": [
+    "sha256Hex",
+    "fileJsonSlug"
+  ],
+  "imports": [
+    "crypto"
+  ],
+  "functions": [
+    "sha256Hex",
+    "fileJsonSlug"
+  ],
+  "dependencies": [
+    "crypto"
+  ],
+  "dbAccess": [
+    "raw_sql"
+  ],
+  "apiUsage": [],
+  "summary": "TypeScript file, 12 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [
+    {
+      "specifier": "crypto",
+      "resolvedPath": null,
+      "isDynamic": false
+    }
+  ],
+  "contentHash": "1790073075bc3713fe4972602db8b8a4221168e9d49d8f1c0868f5eb5c4e14a4"
+}

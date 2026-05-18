@@ -1,0 +1,80 @@
+{
+  "version": "1",
+  "generatedAt": "2026-04-18T20:27:12.191Z",
+  "nodes": [
+    {
+      "id": "src_bar_ts",
+      "type": "file",
+      "label": "src/bar.ts",
+      "filePath": "src/bar.ts",
+      "metadata": {
+        "file": {
+          "filePath": "src/bar.ts",
+          "language": "TypeScript",
+          "purpose": "Source file (1 exports)",
+          "exports": [
+            "bar"
+          ],
+          "imports": [],
+          "functions": [
+            "bar"
+          ],
+          "dependencies": [],
+          "dbAccess": [],
+          "apiUsage": [],
+          "summary": "TypeScript file defining `bar`. Imports from local/relative paths only. Contains 1 functions (`bar`).",
+          "diagnostics": [
+            "tree-sitter:typescript:ok"
+          ],
+          "importRecords": [],
+          "contentHash": "8a58a602dbe9b39f0e72f0c5b942ff9feacbc3718bd5e8b189c712a7e6f8c061"
+        }
+      }
+    },
+    {
+      "id": "src_foo_ts",
+      "type": "file",
+      "label": "src/foo.ts",
+      "filePath": "src/foo.ts",
+      "metadata": {
+        "file": {
+          "filePath": "src/foo.ts",
+          "language": "TypeScript",
+          "purpose": "Source file (1 exports)",
+          "exports": [
+            "foo"
+          ],
+          "imports": [
+            "./bar"
+          ],
+          "functions": [
+            "foo"
+          ],
+          "dependencies": [],
+          "dbAccess": [],
+          "apiUsage": [],
+          "summary": "TypeScript file defining `foo`. Imports from local/relative paths only. Contains 1 functions (`foo`).",
+          "diagnostics": [
+            "tree-sitter:typescript:ok"
+          ],
+          "importRecords": [
+            {
+              "specifier": "./bar",
+              "resolvedPath": null,
+              "isDynamic": false
+            }
+          ],
+          "contentHash": "e3e676c9a1e3852a8228d7a111b21ed58269538b915a3995d7ba9aa02cbed6fd"
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "src_foo_ts",
+      "target": "src_bar_ts",
+      "relation": "imports"
+    }
+  ],
+  "circularDependencyWarnings": []
+}

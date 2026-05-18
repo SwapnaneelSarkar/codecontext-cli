@@ -1,0 +1,29 @@
+{
+  "filePath": "fixtures/minimal/src/foo.ts",
+  "language": "TypeScript",
+  "purpose": "Source file (1 exports)",
+  "exports": [
+    "foo"
+  ],
+  "imports": [
+    "./bar"
+  ],
+  "functions": [
+    "foo"
+  ],
+  "dependencies": [],
+  "dbAccess": [],
+  "apiUsage": [],
+  "summary": "TypeScript file, 6 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [
+    {
+      "specifier": "./bar",
+      "resolvedPath": null,
+      "isDynamic": false
+    }
+  ],
+  "contentHash": "e3e676c9a1e3852a8228d7a111b21ed58269538b915a3995d7ba9aa02cbed6fd"
+}

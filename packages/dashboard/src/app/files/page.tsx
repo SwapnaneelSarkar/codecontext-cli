@@ -2,23 +2,29 @@
 
 import { Sidebar } from '@/components/Sidebar';
 import { FileCard } from '@/components/FileCard';
-import { readProjectIndex } from '@/lib/readContext';
+import { fetchProjectIndex } from '@/lib/readContext';
+import type { ProjectIndex } from '@codecontext/core';
 import { useEffect, useState } from 'react';
 import { Search } from 'lucide-react';
 
 export default function FilesPage() {
-  const [project, setProject] = useState(null);
-  const [filteredFiles, setFilteredFiles] = useState([]);
+  const [project, setProject] = useState<ProjectIndex | null>(null);
+  const [filteredFiles, setFilteredFiles] = useState<ProjectIndex['files']>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const projectData = readProjectIndex();
-    setProject(projectData);
-    if (projectData) {
-      setFilteredFiles(projectData.files);
-    }
-    setIsLoading(false);
+    let cancelled = false;
+    fetchProjectIndex().then((p) => {
+      if (!cancelled) {
+        setProject(p);
+        if (p) setFilteredFiles(p.files);
+        setIsLoading(false);
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   const handleSearch = (query: string) => {
@@ -62,7 +68,7 @@ export default function FilesPage() {
                     placeholder="Search files by name, language, or content..."
                     value={searchQuery}
                     onChange={(e) => handleSearch(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent"
+                    className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
                   />
                 </div>
                 <p className="text-xs text-gray-500 mt-2">

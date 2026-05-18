@@ -2,25 +2,49 @@
   "name": "@codecontext/cli",
   "version": "0.1.0",
   "description": "CodeContext CLI tool for scanning and generating project context",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/codecontext-cli.git",
+    "directory": "packages/cli"
+  },
+  "engines": {
+    "node": ">=18"
+  },
   "bin": {
     "codecontext": "./dist/index.js"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
     "lint": "echo 'No linter configured'",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "test": "vitest run --config vitest.config.cjs",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@codecontext/core": "workspace:*",
+    "@anthropic-ai/sdk": "^0.32.1",
+    "@codecontext/core": "file:../core",
     "chalk": "^5.3.0",
     "commander": "^11.1.0",
-    "ora": "^8.0.1"
+    "ignore": "^6.0.2",
+    "openai": "^4.73.0",
+    "ora": "^8.0.1",
+    "tree-sitter": "^0.21.1",
+    "tree-sitter-go": "^0.21.0",
+    "tree-sitter-python": "^0.21.0",
+    "tree-sitter-typescript": "^0.23.2",
+    "tsconfig-paths": "^4.2.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^20.10.0",
-    "typescript": "^5.3.0"
+    "typescript": "^5.3.0",
+    "vitest": "^2.1.0"
   }
 }

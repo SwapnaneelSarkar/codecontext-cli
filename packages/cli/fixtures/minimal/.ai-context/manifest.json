@@ -1,0 +1,10 @@
+{
+  "src/bar.ts": {
+    "contentHash": "8a58a602dbe9b39f0e72f0c5b942ff9feacbc3718bd5e8b189c712a7e6f8c061",
+    "summaryHash": "8a58a602dbe9b39f0e72f0c5b942ff9feacbc3718bd5e8b189c712a7e6f8c061"
+  },
+  "src/foo.ts": {
+    "contentHash": "e3e676c9a1e3852a8228d7a111b21ed58269538b915a3995d7ba9aa02cbed6fd",
+    "summaryHash": "e3e676c9a1e3852a8228d7a111b21ed58269538b915a3995d7ba9aa02cbed6fd"
+  }
+}

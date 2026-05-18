@@ -1,17 +1,25 @@
 'use client';
 
 import { Sidebar } from '@/components/Sidebar';
-import { readProjectIndex } from '@/lib/readContext';
+import { fetchProjectIndex } from '@/lib/readContext';
+import type { ProjectIndex } from '@codecontext/core';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
-  const [project, setProject] = useState(null);
+  const [project, setProject] = useState<ProjectIndex | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const projectData = readProjectIndex();
-    setProject(projectData);
-    setIsLoading(false);
+    let cancelled = false;
+    fetchProjectIndex().then((p) => {
+      if (!cancelled) {
+        setProject(p);
+        setIsLoading(false);
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   return (
@@ -38,7 +46,7 @@ export default function Home() {
                   <h3 className="text-sm font-medium text-gray-600 mb-2">
                     Total Files
                   </h3>
-                  <p className="text-3xl font-bold text-accent">
+                  <p className="text-3xl font-bold text-sky-600">
                     {project.totalFiles}
                   </p>
                 </div>
@@ -56,7 +64,7 @@ export default function Home() {
                   <h3 className="text-sm font-medium text-gray-600 mb-2">
                     Dependencies
                   </h3>
-                  <p className="text-3xl font-bold text-accent">
+                  <p className="text-3xl font-bold text-sky-600">
                     {project.modules.length}
                   </p>
                 </div>
@@ -74,26 +82,30 @@ export default function Home() {
 
                 <div className="mt-6 pt-6 border-t border-gray-200">
                   <p className="text-sm text-gray-500">
-                    Generated: {new Date(project.generatedAt).toLocaleString()}
+                    Schema v{project.schemaVersion ?? '?'} · Generated:{' '}
+                    {new Date(project.generatedAt).toLocaleString()}
                   </p>
                 </div>
               </div>
 
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-sm font-semibold text-blue-900 mb-2">
+              <div className="bg-sky-50 border border-sky-200 rounded-lg p-6">
+                <h3 className="text-sm font-semibold text-sky-900 mb-2">
                   Getting Started
                 </h3>
-                <ul className="text-sm text-blue-800 space-y-2">
+                <ul className="text-sm text-sky-800 space-y-2">
                   <li>
-                    📊 View the <strong>Dependency Graph</strong> to understand
+                    View the <strong>Dependency Graph</strong> to understand
                     module relationships
                   </li>
                   <li>
-                    📁 Browse the <strong>File Browser</strong> to inspect
+                    Browse the <strong>File Browser</strong> to inspect
                     individual files
                   </li>
                   <li>
-                    💾 Use the generated context files in{' '}
+                    Use <strong>Query</strong> to search summaries
+                  </li>
+                  <li>
+                    Context files live in{' '}
                     <code className="bg-white px-2 py-1 rounded text-xs">
                       .ai-context/
                     </code>
@@ -105,7 +117,12 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center h-96 text-center">
               <p className="text-gray-600 mb-4">No project loaded yet</p>
               <p className="text-sm text-gray-500 max-w-md">
-                Run <code className="bg-muted px-2 py-1 rounded">codecontext generate</code> in your project directory to generate context
+                Run{' '}
+                <code className="bg-muted px-2 py-1 rounded">
+                  codecontext dashboard --dir /your/project
+                </code>{' '}
+                with <code className="bg-muted px-2 py-1 rounded">codecontext generate</code>{' '}
+                run first.
               </p>
             </div>
           )}

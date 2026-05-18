@@ -1,0 +1,15 @@
+
+> @codecontext/cli@0.1.0 test /Users/swapnaneelsarkar/Documents/GitHub/codecontext-cli/packages/cli
+> vitest run --config vitest.config.cjs
+
+
+ RUN  v2.1.9 /Users/swapnaneelsarkar/Documents/GitHub/codecontext-cli/packages/cli
+
+ ✓ src/parser/regexExtract.test.ts (1 test) 2ms
+ ✓ test/integration/generate.test.ts (1 test) 1767ms
+
+ Test Files  2 passed (2)
+      Tests  2 passed (2)
+   Start at  01:57:10
+   Duration  1.95s (transform 36ms, setup 0ms, collect 36ms, tests 1.77s, environment 0ms, prepare 71ms)
+

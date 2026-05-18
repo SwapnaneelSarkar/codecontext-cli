@@ -1,0 +1,40 @@
+{
+  "filePath": "src/utils/cliVersion.ts",
+  "language": "TypeScript",
+  "purpose": "Source file (1 exports)",
+  "exports": [
+    "getCliVersion"
+  ],
+  "imports": [
+    "fs",
+    "path"
+  ],
+  "functions": [
+    "getCliVersion"
+  ],
+  "dependencies": [
+    "fs",
+    "path"
+  ],
+  "dbAccess": [],
+  "apiUsage": [
+    "next_route"
+  ],
+  "summary": "TypeScript file, 13 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [
+    {
+      "specifier": "fs",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "path",
+      "resolvedPath": null,
+      "isDynamic": false
+    }
+  ],
+  "contentHash": "515eca47f4fe21a10185b6b1b4900ab3accd4b3de63e894daa1fd49a443813a3"
+}

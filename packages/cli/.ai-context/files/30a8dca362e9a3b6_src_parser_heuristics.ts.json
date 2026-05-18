@@ -1,0 +1,33 @@
+{
+  "filePath": "src/parser/heuristics.ts",
+  "language": "TypeScript",
+  "purpose": "DB / API hints from source text (complements AST where available)",
+  "exports": [
+    "detectDbAccess",
+    "detectApiUsage"
+  ],
+  "imports": [],
+  "functions": [
+    "detectDbAccess",
+    "detectApiUsage"
+  ],
+  "dependencies": [],
+  "dbAccess": [
+    "sequelize",
+    "typeorm",
+    "sqlalchemy",
+    "database/sql",
+    "raw_sql"
+  ],
+  "apiUsage": [
+    "express",
+    "fastapi",
+    "flask"
+  ],
+  "summary": "TypeScript file, 42 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [],
+  "contentHash": "642f87922e2391b7cf9a8c6465d14f0bb1344119e0e332c8929608c89b13aa45"
+}

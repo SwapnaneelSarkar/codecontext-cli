@@ -1,0 +1,61 @@
+{
+  "filePath": "src/commands/stats.ts",
+  "language": "TypeScript",
+  "purpose": "Source file (0 exports)",
+  "exports": [],
+  "imports": [
+    "commander",
+    "chalk",
+    "fs",
+    "path",
+    "@codecontext/core",
+    "../summarizer/llmSummarizer"
+  ],
+  "functions": [],
+  "dependencies": [
+    "commander",
+    "chalk",
+    "fs",
+    "path",
+    "@codecontext/core"
+  ],
+  "dbAccess": [],
+  "apiUsage": [],
+  "summary": "TypeScript file, 35 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [
+    {
+      "specifier": "commander",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "chalk",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "fs",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "path",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "@codecontext/core",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "../summarizer/llmSummarizer",
+      "resolvedPath": null,
+      "isDynamic": false
+    }
+  ],
+  "contentHash": "fbb5158c28c55a7fe9970c96ffec5bb14ec8083c401626c3501a799ff65fcefb"
+}

@@ -1,0 +1,39 @@
+{
+  "filePath": "src/graph/graphBuilder.ts",
+  "language": "TypeScript",
+  "purpose": "Build dependency graph from file contexts and resolved import map.",
+  "exports": [
+    "buildDependencyGraph"
+  ],
+  "imports": [
+    "@codecontext/core",
+    "../parser/dependencyMapper"
+  ],
+  "functions": [
+    "detectCycles",
+    "moduleLabelForPath",
+    "buildDependencyGraph"
+  ],
+  "dependencies": [
+    "@codecontext/core"
+  ],
+  "dbAccess": [],
+  "apiUsage": [],
+  "summary": "TypeScript file, 164 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [
+    {
+      "specifier": "@codecontext/core",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "../parser/dependencyMapper",
+      "resolvedPath": null,
+      "isDynamic": false
+    }
+  ],
+  "contentHash": "b44b7de2ea8807dc6a738a0a9d3d96d8d0416131db4874443fbaafbae54445e5"
+}

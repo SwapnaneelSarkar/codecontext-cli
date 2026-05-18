@@ -1,0 +1,27 @@
+{
+  "filePath": "vitest.config.cjs",
+  "language": "JavaScript",
+  "purpose": "@type {import('vitest/config').UserConfig}",
+  "exports": [],
+  "imports": [
+    "vitest/config"
+  ],
+  "functions": [],
+  "dependencies": [
+    "vitest"
+  ],
+  "dbAccess": [],
+  "apiUsage": [],
+  "summary": "JavaScript file, 9 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [
+    {
+      "specifier": "vitest/config",
+      "resolvedPath": null,
+      "isDynamic": true
+    }
+  ],
+  "contentHash": "73e9e2effde0f0ebe8704fcdc610e6cc8d0e2737271581008da70a832900aeb0"
+}

@@ -1,0 +1,59 @@
+{
+  "filePath": "src/commands/dashboard.ts",
+  "language": "TypeScript",
+  "purpose": "ignore",
+  "exports": [],
+  "imports": [
+    "commander",
+    "chalk",
+    "child_process",
+    "fs",
+    "path"
+  ],
+  "functions": [
+    "findWorkspaceRoot",
+    "resolveDashboardDir",
+    "openUrl"
+  ],
+  "dependencies": [
+    "commander",
+    "chalk",
+    "child_process",
+    "fs",
+    "path"
+  ],
+  "dbAccess": [],
+  "apiUsage": [],
+  "summary": "TypeScript file, 90 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [
+    {
+      "specifier": "commander",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "chalk",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "child_process",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "fs",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "path",
+      "resolvedPath": null,
+      "isDynamic": false
+    }
+  ],
+  "contentHash": "1f5db0ca22e85e1e7860bd00f6e1aa1cc8bb1fc50182b98c547dbe58fa26b7df"
+}

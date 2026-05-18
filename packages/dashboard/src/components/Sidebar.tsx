@@ -3,7 +3,7 @@
 import { ProjectIndex } from '@codecontext/core';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Code, Network, FileText } from 'lucide-react';
+import { Code, Network, FileText, Search } from 'lucide-react';
 
 interface SidebarProps {
   project: ProjectIndex | null;
@@ -16,6 +16,7 @@ export function Sidebar({ project }: SidebarProps) {
     { href: '/', label: 'Overview', icon: FileText },
     { href: '/graph', label: 'Dependency Graph', icon: Network },
     { href: '/files', label: 'File Browser', icon: Code },
+    { href: '/query', label: 'Query', icon: Search },
   ];
 
   return (

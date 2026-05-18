@@ -1,0 +1,1 @@
+{"version":3,"file":"prompt.js","sourceRoot":"","sources":["../../src/commands/prompt.ts"],"names":[],"mappings":";;;AAAA,yCAAoC;AAEpC,MAAM,KAAK,GAAG,sQAAsQ,CAAC;AAExQ,QAAA,aAAa,GAAG,IAAI,mBAAO,CAAC,QAAQ,CAAC;KAC/C,WAAW,CAAC,+CAA+C,CAAC;KAC5D,MAAM,CAAC,GAAG,EAAE;IACX,OAAO,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC"}

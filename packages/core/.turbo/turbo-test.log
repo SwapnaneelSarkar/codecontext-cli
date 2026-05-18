@@ -1,0 +1,14 @@
+
+> @codecontext/core@0.1.0 test /Users/swapnaneelsarkar/Documents/GitHub/codecontext-cli/packages/core
+> vitest run --config vitest.config.cjs
+
+
+ RUN  v2.1.9 /Users/swapnaneelsarkar/Documents/GitHub/codecontext-cli/packages/core
+
+ ✓ src/query/bm25.test.ts (1 test) 2ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  01:42:53
+   Duration  365ms (transform 24ms, setup 0ms, collect 17ms, tests 2ms, environment 0ms, prepare 46ms)
+

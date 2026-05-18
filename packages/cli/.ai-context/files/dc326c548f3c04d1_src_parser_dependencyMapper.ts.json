@@ -1,0 +1,55 @@
+{
+  "filePath": "src/parser/dependencyMapper.ts",
+  "language": "TypeScript",
+  "purpose": "missing",
+  "exports": [
+    "mapDependencies"
+  ],
+  "imports": [
+    "@codecontext/core",
+    "fs",
+    "path",
+    "tsconfig-paths"
+  ],
+  "functions": [
+    "probeFile",
+    "resolveRelative",
+    "isBareOrPackage",
+    "mapDependencies"
+  ],
+  "dependencies": [
+    "@codecontext/core",
+    "fs",
+    "path",
+    "tsconfig-paths"
+  ],
+  "dbAccess": [],
+  "apiUsage": [],
+  "summary": "TypeScript file, 164 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [
+    {
+      "specifier": "@codecontext/core",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "fs",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "path",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "tsconfig-paths",
+      "resolvedPath": null,
+      "isDynamic": false
+    }
+  ],
+  "contentHash": "1df97852fcf92c3c3796a2839543364725c1e2207f8e52ed1945a5d66c0d12af"
+}

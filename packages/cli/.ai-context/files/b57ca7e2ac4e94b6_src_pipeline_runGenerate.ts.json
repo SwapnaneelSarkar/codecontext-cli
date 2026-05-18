@@ -1,0 +1,81 @@
+{
+  "filePath": "src/pipeline/runGenerate.ts",
+  "language": "TypeScript",
+  "purpose": "Source file (1 exports)",
+  "exports": [
+    "runGenerate"
+  ],
+  "imports": [
+    "fs",
+    "path",
+    "../parser/fileScanner",
+    "../parser/astParser",
+    "../parser/dependencyMapper",
+    "../graph/graphBuilder",
+    "../writer/contextWriter",
+    "../config/loadConfig",
+    "../summarizer/llmSummarizer"
+  ],
+  "functions": [
+    "runGenerate",
+    "readContent"
+  ],
+  "dependencies": [
+    "fs",
+    "path"
+  ],
+  "dbAccess": [],
+  "apiUsage": [],
+  "summary": "TypeScript file, 86 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [
+    {
+      "specifier": "fs",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "path",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "../parser/fileScanner",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "../parser/astParser",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "../parser/dependencyMapper",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "../graph/graphBuilder",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "../writer/contextWriter",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "../config/loadConfig",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "../summarizer/llmSummarizer",
+      "resolvedPath": null,
+      "isDynamic": false
+    }
+  ],
+  "contentHash": "b4626245ee93ff839be201d6a75a3edb39365b9c9cc79963fcfe5a5227e37155"
+}

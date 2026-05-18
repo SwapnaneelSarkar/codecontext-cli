@@ -1,0 +1,17 @@
+# CodeContext — cli
+
+Before editing, read `.ai-context/index.json` for the full project index and file summaries.
+
+Frequent import roots:
+- relative
+- path
+- fs
+- @codecontext
+- commander
+- chalk
+- vitest
+- child_process
+- tsconfig-paths
+- ignore
+- lodash
+- tree-sitter

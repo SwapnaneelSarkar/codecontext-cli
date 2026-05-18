@@ -1,0 +1,53 @@
+{
+  "filePath": "src/commands/generate.ts",
+  "language": "TypeScript",
+  "purpose": "Source file (0 exports)",
+  "exports": [],
+  "imports": [
+    "commander",
+    "chalk",
+    "path",
+    "../utils/spinner",
+    "../pipeline/runGenerate"
+  ],
+  "functions": [],
+  "dependencies": [
+    "commander",
+    "chalk",
+    "path"
+  ],
+  "dbAccess": [],
+  "apiUsage": [],
+  "summary": "TypeScript file, 65 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [
+    {
+      "specifier": "commander",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "chalk",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "path",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "../utils/spinner",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "../pipeline/runGenerate",
+      "resolvedPath": null,
+      "isDynamic": false
+    }
+  ],
+  "contentHash": "f9d5e8892b28d723cf4c7c4c7954e71310f78efed061ab61da3ef035357625c5"
+}

@@ -1,0 +1,55 @@
+{
+  "filePath": "src/commands/query.ts",
+  "language": "TypeScript",
+  "purpose": "Source file (0 exports)",
+  "exports": [],
+  "imports": [
+    "commander",
+    "chalk",
+    "fs",
+    "path",
+    "@codecontext/core"
+  ],
+  "functions": [],
+  "dependencies": [
+    "commander",
+    "chalk",
+    "fs",
+    "path",
+    "@codecontext/core"
+  ],
+  "dbAccess": [],
+  "apiUsage": [],
+  "summary": "TypeScript file, 45 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [
+    {
+      "specifier": "commander",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "chalk",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "fs",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "path",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "@codecontext/core",
+      "resolvedPath": null,
+      "isDynamic": false
+    }
+  ],
+  "contentHash": "bd3420732137576ef08353d23f67a33913b7c4c65d76edb3e7bfaf2bb273761a"
+}

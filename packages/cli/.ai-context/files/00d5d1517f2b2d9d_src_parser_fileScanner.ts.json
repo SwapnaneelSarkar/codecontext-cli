@@ -1,0 +1,48 @@
+{
+  "filePath": "src/parser/fileScanner.ts",
+  "language": "TypeScript",
+  "purpose": "Recursively scan directory and return source file paths (absolute).",
+  "exports": [
+    "scanFiles"
+  ],
+  "imports": [
+    "fs",
+    "path",
+    "ignore"
+  ],
+  "functions": [
+    "loadGitignoreMatchers",
+    "isSourceFile",
+    "scanFiles",
+    "walkDir"
+  ],
+  "dependencies": [
+    "fs",
+    "path",
+    "ignore"
+  ],
+  "dbAccess": [],
+  "apiUsage": [],
+  "summary": "TypeScript file, 101 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [
+    {
+      "specifier": "fs",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "path",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "ignore",
+      "resolvedPath": null,
+      "isDynamic": false
+    }
+  ],
+  "contentHash": "c71ad95dfd8846293dcb4db1477acf5848a62fcb2791b1e576ec2233e2c16165"
+}

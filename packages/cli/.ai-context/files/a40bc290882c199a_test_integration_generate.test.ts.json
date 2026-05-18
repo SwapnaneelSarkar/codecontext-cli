@@ -1,0 +1,48 @@
+{
+  "filePath": "test/integration/generate.test.ts",
+  "language": "TypeScript",
+  "purpose": "Source file (0 exports)",
+  "exports": [],
+  "imports": [
+    "vitest",
+    "child_process",
+    "fs",
+    "path"
+  ],
+  "functions": [],
+  "dependencies": [
+    "vitest",
+    "child_process",
+    "fs",
+    "path"
+  ],
+  "dbAccess": [],
+  "apiUsage": [],
+  "summary": "TypeScript file, 42 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [
+    {
+      "specifier": "vitest",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "child_process",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "fs",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "path",
+      "resolvedPath": null,
+      "isDynamic": false
+    }
+  ],
+  "contentHash": "21a9f1463bea74c870bff217c1e17653bddda04cd773ac2c678180dc58a32dfb"
+}

@@ -4,10 +4,17 @@
     "**/.env",
     "**/.env.local"
   ],
-  "tasks": {
+  "pipeline": {
     "build": {
       "dependsOn": [
         "^build"
+      ],
+      "inputs": [
+        "src/**",
+        "package.json",
+        "tsconfig.json",
+        "next.config.js",
+        "next.config.mjs"
       ],
       "outputs": [
         "dist/**",
@@ -16,12 +23,21 @@
     },
     "dev": {
       "cache": false,
-      "interactive": true
+      "interactive": true,
+      "persistent": true
     },
     "lint": {
       "outputs": []
     },
     "test": {
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "src/**",
+        "vitest.config.cjs",
+        "**/*.test.ts"
+      ],
       "outputs": [
         "coverage/**"
       ]

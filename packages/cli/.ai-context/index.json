@@ -1,0 +1,3183 @@
+{
+  "schemaVersion": "1",
+  "cliVersion": "0.1.0",
+  "projectName": "cli",
+  "generatedAt": "2026-04-18T19:23:01.288Z",
+  "totalFiles": 27,
+  "languages": [
+    "TypeScript",
+    "JavaScript"
+  ],
+  "modules": [
+    "commander",
+    "chalk",
+    "child_process",
+    "fs",
+    "path",
+    "@codecontext/core",
+    "tsconfig-paths",
+    "ignore",
+    "vitest",
+    "lodash",
+    "tree-sitter",
+    "tree-sitter-typescript",
+    "tree-sitter-python",
+    "tree-sitter-go",
+    "@anthropic-ai/sdk",
+    "openai",
+    "zod",
+    "crypto",
+    "ora"
+  ],
+  "files": [
+    {
+      "filePath": "fixtures/minimal/src/bar.ts",
+      "language": "TypeScript",
+      "purpose": "Source file (1 exports)",
+      "exports": [
+        "bar"
+      ],
+      "imports": [],
+      "functions": [
+        "bar"
+      ],
+      "dependencies": [],
+      "dbAccess": [],
+      "apiUsage": [],
+      "summary": "TypeScript file, 4 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [],
+      "contentHash": "8a58a602dbe9b39f0e72f0c5b942ff9feacbc3718bd5e8b189c712a7e6f8c061"
+    },
+    {
+      "filePath": "fixtures/minimal/src/foo.ts",
+      "language": "TypeScript",
+      "purpose": "Source file (1 exports)",
+      "exports": [
+        "foo"
+      ],
+      "imports": [
+        "./bar"
+      ],
+      "functions": [
+        "foo"
+      ],
+      "dependencies": [],
+      "dbAccess": [],
+      "apiUsage": [],
+      "summary": "TypeScript file, 6 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [
+        {
+          "specifier": "./bar",
+          "resolvedPath": null,
+          "isDynamic": false
+        }
+      ],
+      "contentHash": "e3e676c9a1e3852a8228d7a111b21ed58269538b915a3995d7ba9aa02cbed6fd"
+    },
+    {
+      "filePath": "src/commands/dashboard.ts",
+      "language": "TypeScript",
+      "purpose": "ignore",
+      "exports": [],
+      "imports": [
+        "commander",
+        "chalk",
+        "child_process",
+        "fs",
+        "path"
+      ],
+      "functions": [
+        "findWorkspaceRoot",
+        "resolveDashboardDir",
+        "openUrl"
+      ],
+      "dependencies": [
+        "commander",
+        "chalk",
+        "child_process",
+        "fs",
+        "path"
+      ],
+      "dbAccess": [],
+      "apiUsage": [],
+      "summary": "TypeScript file, 90 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [
+        {
+          "specifier": "commander",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "chalk",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "child_process",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "fs",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "path",
+          "resolvedPath": null,
+          "isDynamic": false
+        }
+      ],
+      "contentHash": "1f5db0ca22e85e1e7860bd00f6e1aa1cc8bb1fc50182b98c547dbe58fa26b7df"
+    },
+    {
+      "filePath": "src/commands/generate.ts",
+      "language": "TypeScript",
+      "purpose": "Source file (0 exports)",
+      "exports": [],
+      "imports": [
+        "commander",
+        "chalk",
+        "path",
+        "../utils/spinner",
+        "../pipeline/runGenerate"
+      ],
+      "functions": [],
+      "dependencies": [
+        "commander",
+        "chalk",
+        "path"
+      ],
+      "dbAccess": [],
+      "apiUsage": [],
+      "summary": "TypeScript file, 65 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [
+        {
+          "specifier": "commander",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "chalk",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "path",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "../utils/spinner",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "../pipeline/runGenerate",
+          "resolvedPath": null,
+          "isDynamic": false
+        }
+      ],
+      "contentHash": "f9d5e8892b28d723cf4c7c4c7954e71310f78efed061ab61da3ef035357625c5"
+    },
+    {
+      "filePath": "src/commands/init.ts",
+      "language": "TypeScript",
+      "purpose": "Source file (0 exports)",
+      "exports": [],
+      "imports": [
+        "commander",
+        "chalk",
+        "../utils/spinner",
+        "fs",
+        "path",
+        "@codecontext/core"
+      ],
+      "functions": [],
+      "dependencies": [
+        "commander",
+        "chalk",
+        "fs",
+        "path",
+        "@codecontext/core"
+      ],
+      "dbAccess": [],
+      "apiUsage": [],
+      "summary": "TypeScript file, 64 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [
+        {
+          "specifier": "commander",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "chalk",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "../utils/spinner",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "fs",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "path",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "@codecontext/core",
+          "resolvedPath": null,
+          "isDynamic": false
+        }
+      ],
+      "contentHash": "5e68debf7b2542b9943d4afe461255db089b25c3d57731b056ac1f907172f199"
+    },
+    {
+      "filePath": "src/commands/prompt.ts",
+      "language": "TypeScript",
+      "purpose": "Source file (0 exports)",
+      "exports": [],
+      "imports": [
+        "commander"
+      ],
+      "functions": [],
+      "dependencies": [
+        "commander"
+      ],
+      "dbAccess": [],
+      "apiUsage": [],
+      "summary": "TypeScript file, 10 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [
+        {
+          "specifier": "commander",
+          "resolvedPath": null,
+          "isDynamic": false
+        }
+      ],
+      "contentHash": "e894c3ce0b2032c3e82b0b4bd243d85f7054a35017381c6886b55e9f474ce954"
+    },
+    {
+      "filePath": "src/commands/query.ts",
+      "language": "TypeScript",
+      "purpose": "Source file (0 exports)",
+      "exports": [],
+      "imports": [
+        "commander",
+        "chalk",
+        "fs",
+        "path",
+        "@codecontext/core"
+      ],
+      "functions": [],
+      "dependencies": [
+        "commander",
+        "chalk",
+        "fs",
+        "path",
+        "@codecontext/core"
+      ],
+      "dbAccess": [],
+      "apiUsage": [],
+      "summary": "TypeScript file, 45 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [
+        {
+          "specifier": "commander",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "chalk",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "fs",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "path",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "@codecontext/core",
+          "resolvedPath": null,
+          "isDynamic": false
+        }
+      ],
+      "contentHash": "bd3420732137576ef08353d23f67a33913b7c4c65d76edb3e7bfaf2bb273761a"
+    },
+    {
+      "filePath": "src/commands/stats.ts",
+      "language": "TypeScript",
+      "purpose": "Source file (0 exports)",
+      "exports": [],
+      "imports": [
+        "commander",
+        "chalk",
+        "fs",
+        "path",
+        "@codecontext/core",
+        "../summarizer/llmSummarizer"
+      ],
+      "functions": [],
+      "dependencies": [
+        "commander",
+        "chalk",
+        "fs",
+        "path",
+        "@codecontext/core"
+      ],
+      "dbAccess": [],
+      "apiUsage": [],
+      "summary": "TypeScript file, 35 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [
+        {
+          "specifier": "commander",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "chalk",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "fs",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "path",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "@codecontext/core",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "../summarizer/llmSummarizer",
+          "resolvedPath": null,
+          "isDynamic": false
+        }
+      ],
+      "contentHash": "fbb5158c28c55a7fe9970c96ffec5bb14ec8083c401626c3501a799ff65fcefb"
+    },
+    {
+      "filePath": "src/commands/update.ts",
+      "language": "TypeScript",
+      "purpose": "Source file (0 exports)",
+      "exports": [],
+      "imports": [
+        "commander",
+        "chalk",
+        "path",
+        "../utils/spinner",
+        "../pipeline/runGenerate"
+      ],
+      "functions": [],
+      "dependencies": [
+        "commander",
+        "chalk",
+        "path"
+      ],
+      "dbAccess": [
+        "raw_sql"
+      ],
+      "apiUsage": [],
+      "summary": "TypeScript file, 34 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [
+        {
+          "specifier": "commander",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "chalk",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "path",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "../utils/spinner",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "../pipeline/runGenerate",
+          "resolvedPath": null,
+          "isDynamic": false
+        }
+      ],
+      "contentHash": "7c3be9cf14c423a26f7225dbb0a427c68bd3e8bc6d697f1c39ea38a36c10d9ac"
+    },
+    {
+      "filePath": "src/config/loadConfig.ts",
+      "language": "TypeScript",
+      "purpose": "Source file (1 exports)",
+      "exports": [
+        "loadProjectConfig"
+      ],
+      "imports": [
+        "fs",
+        "path",
+        "@codecontext/core"
+      ],
+      "functions": [
+        "loadProjectConfig",
+        "deepMerge"
+      ],
+      "dependencies": [
+        "fs",
+        "path",
+        "@codecontext/core"
+      ],
+      "dbAccess": [],
+      "apiUsage": [],
+      "summary": "TypeScript file, 39 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [
+        {
+          "specifier": "fs",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "path",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "@codecontext/core",
+          "resolvedPath": null,
+          "isDynamic": false
+        }
+      ],
+      "contentHash": "5826de65134e612e21d1dd67c42d9ee379076c9553dd347263289b08265057d8"
+    },
+    {
+      "filePath": "src/graph/graphBuilder.ts",
+      "language": "TypeScript",
+      "purpose": "Build dependency graph from file contexts and resolved import map.",
+      "exports": [
+        "buildDependencyGraph"
+      ],
+      "imports": [
+        "@codecontext/core",
+        "../parser/dependencyMapper"
+      ],
+      "functions": [
+        "detectCycles",
+        "moduleLabelForPath",
+        "buildDependencyGraph"
+      ],
+      "dependencies": [
+        "@codecontext/core"
+      ],
+      "dbAccess": [],
+      "apiUsage": [],
+      "summary": "TypeScript file, 164 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [
+        {
+          "specifier": "@codecontext/core",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "../parser/dependencyMapper",
+          "resolvedPath": null,
+          "isDynamic": false
+        }
+      ],
+      "contentHash": "b44b7de2ea8807dc6a738a0a9d3d96d8d0416131db4874443fbaafbae54445e5"
+    },
+    {
+      "filePath": "src/index.ts",
+      "language": "TypeScript",
+      "purpose": "Source file (0 exports)",
+      "exports": [],
+      "imports": [
+        "commander",
+        "./commands/init",
+        "./commands/generate",
+        "./commands/query",
+        "./commands/update",
+        "./commands/stats",
+        "./commands/dashboard",
+        "./commands/prompt"
+      ],
+      "functions": [],
+      "dependencies": [
+        "commander"
+      ],
+      "dbAccess": [
+        "raw_sql"
+      ],
+      "apiUsage": [],
+      "summary": "TypeScript file, 32 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [
+        {
+          "specifier": "commander",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "./commands/init",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "./commands/generate",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "./commands/query",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "./commands/update",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "./commands/stats",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "./commands/dashboard",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "./commands/prompt",
+          "resolvedPath": null,
+          "isDynamic": false
+        }
+      ],
+      "contentHash": "66f4491e80f622341e2f3f1459d89c0b32375cb527c9c83aabde9a96c74a4c8f"
+    },
+    {
+      "filePath": "src/parser/astParser.ts",
+      "language": "TypeScript",
+      "purpose": "Source file (1 exports)",
+      "exports": [
+        "parseFilesAST"
+      ],
+      "imports": [
+        "fs",
+        "path",
+        "@codecontext/core",
+        "../utils/hash",
+        "./heuristics",
+        "./regexExtract",
+        "./treeSitterOptional"
+      ],
+      "functions": [
+        "firstCommentPurpose",
+        "buildImportRecords",
+        "parseFilesAST"
+      ],
+      "dependencies": [
+        "fs",
+        "path",
+        "@codecontext/core"
+      ],
+      "dbAccess": [],
+      "apiUsage": [],
+      "summary": "TypeScript file, 142 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [
+        {
+          "specifier": "fs",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "path",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "@codecontext/core",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "../utils/hash",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "./heuristics",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "./regexExtract",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "./treeSitterOptional",
+          "resolvedPath": null,
+          "isDynamic": false
+        }
+      ],
+      "contentHash": "47f1a0470ff23419e0ae77bcc4ce9a149371ce7b845a83198fa84d950fdea2cd"
+    },
+    {
+      "filePath": "src/parser/dependencyMapper.ts",
+      "language": "TypeScript",
+      "purpose": "missing",
+      "exports": [
+        "mapDependencies"
+      ],
+      "imports": [
+        "@codecontext/core",
+        "fs",
+        "path",
+        "tsconfig-paths"
+      ],
+      "functions": [
+        "probeFile",
+        "resolveRelative",
+        "isBareOrPackage",
+        "mapDependencies"
+      ],
+      "dependencies": [
+        "@codecontext/core",
+        "fs",
+        "path",
+        "tsconfig-paths"
+      ],
+      "dbAccess": [],
+      "apiUsage": [],
+      "summary": "TypeScript file, 164 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [
+        {
+          "specifier": "@codecontext/core",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "fs",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "path",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "tsconfig-paths",
+          "resolvedPath": null,
+          "isDynamic": false
+        }
+      ],
+      "contentHash": "1df97852fcf92c3c3796a2839543364725c1e2207f8e52ed1945a5d66c0d12af"
+    },
+    {
+      "filePath": "src/parser/fileScanner.ts",
+      "language": "TypeScript",
+      "purpose": "Recursively scan directory and return source file paths (absolute).",
+      "exports": [
+        "scanFiles"
+      ],
+      "imports": [
+        "fs",
+        "path",
+        "ignore"
+      ],
+      "functions": [
+        "loadGitignoreMatchers",
+        "isSourceFile",
+        "scanFiles",
+        "walkDir"
+      ],
+      "dependencies": [
+        "fs",
+        "path",
+        "ignore"
+      ],
+      "dbAccess": [],
+      "apiUsage": [],
+      "summary": "TypeScript file, 101 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [
+        {
+          "specifier": "fs",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "path",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "ignore",
+          "resolvedPath": null,
+          "isDynamic": false
+        }
+      ],
+      "contentHash": "c71ad95dfd8846293dcb4db1477acf5848a62fcb2791b1e576ec2233e2c16165"
+    },
+    {
+      "filePath": "src/parser/heuristics.ts",
+      "language": "TypeScript",
+      "purpose": "DB / API hints from source text (complements AST where available)",
+      "exports": [
+        "detectDbAccess",
+        "detectApiUsage"
+      ],
+      "imports": [],
+      "functions": [
+        "detectDbAccess",
+        "detectApiUsage"
+      ],
+      "dependencies": [],
+      "dbAccess": [
+        "sequelize",
+        "typeorm",
+        "sqlalchemy",
+        "database/sql",
+        "raw_sql"
+      ],
+      "apiUsage": [
+        "express",
+        "fastapi",
+        "flask"
+      ],
+      "summary": "TypeScript file, 42 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [],
+      "contentHash": "642f87922e2391b7cf9a8c6465d14f0bb1344119e0e332c8929608c89b13aa45"
+    },
+    {
+      "filePath": "src/parser/regexExtract.test.ts",
+      "language": "TypeScript",
+      "purpose": "Source file (1 exports)",
+      "exports": [
+        "hello"
+      ],
+      "imports": [
+        "vitest",
+        "./regexExtract",
+        "lodash"
+      ],
+      "functions": [
+        "hello"
+      ],
+      "dependencies": [
+        "vitest",
+        "lodash"
+      ],
+      "dbAccess": [],
+      "apiUsage": [],
+      "summary": "TypeScript file, 15 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [
+        {
+          "specifier": "vitest",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "./regexExtract",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "lodash",
+          "resolvedPath": null,
+          "isDynamic": false
+        }
+      ],
+      "contentHash": "dc68394e09c322d49a954d3f1856553a79e2f6f432c4ff247daae2f6d05276d6"
+    },
+    {
+      "filePath": "src/parser/regexExtract.ts",
+      "language": "TypeScript",
+      "purpose": "Portable extraction when Tree-sitter is unavailable or as supplement.",
+      "exports": [
+        "extractJsTsLike",
+        "extractPython",
+        "extractGo"
+      ],
+      "imports": [],
+      "functions": [
+        "npmPackageName",
+        "extractJsTsLike",
+        "extractPython",
+        "extractGo",
+        "pushImp"
+      ],
+      "dependencies": [],
+      "dbAccess": [],
+      "apiUsage": [],
+      "summary": "TypeScript file, 176 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [],
+      "contentHash": "9a5fda9d24153fa84174b9c83642e2b896293ce3b63149dd3520ce544c0541ff"
+    },
+    {
+      "filePath": "src/parser/treeSitterOptional.ts",
+      "language": "TypeScript",
+      "purpose": "Optional Tree-sitter parse (native bindings). Validates grammars load; extraction uses regex.",
+      "exports": [
+        "tryParseWithTreeSitter",
+        "tryParsePythonTreeSitter",
+        "tryParseGoTreeSitter"
+      ],
+      "imports": [
+        "tree-sitter",
+        "tree-sitter-typescript",
+        "tree-sitter-python",
+        "tree-sitter-go"
+      ],
+      "functions": [
+        "tryParseWithTreeSitter",
+        "tryParsePythonTreeSitter",
+        "tryParseGoTreeSitter"
+      ],
+      "dependencies": [
+        "tree-sitter",
+        "tree-sitter-typescript",
+        "tree-sitter-python",
+        "tree-sitter-go"
+      ],
+      "dbAccess": [],
+      "apiUsage": [],
+      "summary": "TypeScript file, 58 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [
+        {
+          "specifier": "tree-sitter",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "tree-sitter-typescript",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "tree-sitter-python",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "tree-sitter-go",
+          "resolvedPath": null,
+          "isDynamic": false
+        }
+      ],
+      "contentHash": "b5383c25d9fe083ec9ab8fb53ea64e1c3b17ebcf6332c934f83056fa50b33070"
+    },
+    {
+      "filePath": "src/pipeline/runGenerate.ts",
+      "language": "TypeScript",
+      "purpose": "Source file (1 exports)",
+      "exports": [
+        "runGenerate"
+      ],
+      "imports": [
+        "fs",
+        "path",
+        "../parser/fileScanner",
+        "../parser/astParser",
+        "../parser/dependencyMapper",
+        "../graph/graphBuilder",
+        "../writer/contextWriter",
+        "../config/loadConfig",
+        "../summarizer/llmSummarizer"
+      ],
+      "functions": [
+        "runGenerate",
+        "readContent"
+      ],
+      "dependencies": [
+        "fs",
+        "path"
+      ],
+      "dbAccess": [],
+      "apiUsage": [],
+      "summary": "TypeScript file, 86 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [
+        {
+          "specifier": "fs",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "path",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "../parser/fileScanner",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "../parser/astParser",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "../parser/dependencyMapper",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "../graph/graphBuilder",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "../writer/contextWriter",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "../config/loadConfig",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "../summarizer/llmSummarizer",
+          "resolvedPath": null,
+          "isDynamic": false
+        }
+      ],
+      "contentHash": "b4626245ee93ff839be201d6a75a3edb39365b9c9cc79963fcfe5a5227e37155"
+    },
+    {
+      "filePath": "src/summarizer/llmSummarizer.ts",
+      "language": "TypeScript",
+      "purpose": "Rough USD estimate (order-of-magnitude; update with current pricing).",
+      "exports": [
+        "estimateCostUsd",
+        "summarizeFileContext",
+        "summarizeFiles"
+      ],
+      "imports": [
+        "@anthropic-ai/sdk",
+        "openai",
+        "fs",
+        "path",
+        "zod",
+        "@codecontext/core",
+        "../utils/hash"
+      ],
+      "functions": [
+        "loadCache",
+        "saveCache",
+        "cacheKey",
+        "estimateCostUsd",
+        "callAnthropic",
+        "callOpenAI",
+        "buildUserPayload",
+        "parseJsonLoose",
+        "summarizeFileContext",
+        "summarizeFiles"
+      ],
+      "dependencies": [
+        "@anthropic-ai/sdk",
+        "openai",
+        "fs",
+        "path",
+        "zod",
+        "@codecontext/core"
+      ],
+      "dbAccess": [
+        "raw_sql"
+      ],
+      "apiUsage": [],
+      "summary": "TypeScript file, 281 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [
+        {
+          "specifier": "@anthropic-ai/sdk",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "openai",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "fs",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "path",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "zod",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "@codecontext/core",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "../utils/hash",
+          "resolvedPath": null,
+          "isDynamic": false
+        }
+      ],
+      "contentHash": "da2cdfec406ea0feebae1c979f2b3e475070ff994345d309a0476dfca147ac34"
+    },
+    {
+      "filePath": "src/utils/cliVersion.ts",
+      "language": "TypeScript",
+      "purpose": "Source file (1 exports)",
+      "exports": [
+        "getCliVersion"
+      ],
+      "imports": [
+        "fs",
+        "path"
+      ],
+      "functions": [
+        "getCliVersion"
+      ],
+      "dependencies": [
+        "fs",
+        "path"
+      ],
+      "dbAccess": [],
+      "apiUsage": [
+        "next_route"
+      ],
+      "summary": "TypeScript file, 13 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [
+        {
+          "specifier": "fs",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "path",
+          "resolvedPath": null,
+          "isDynamic": false
+        }
+      ],
+      "contentHash": "515eca47f4fe21a10185b6b1b4900ab3accd4b3de63e894daa1fd49a443813a3"
+    },
+    {
+      "filePath": "src/utils/hash.ts",
+      "language": "TypeScript",
+      "purpose": "Source file (2 exports)",
+      "exports": [
+        "sha256Hex",
+        "fileJsonSlug"
+      ],
+      "imports": [
+        "crypto"
+      ],
+      "functions": [
+        "sha256Hex",
+        "fileJsonSlug"
+      ],
+      "dependencies": [
+        "crypto"
+      ],
+      "dbAccess": [
+        "raw_sql"
+      ],
+      "apiUsage": [],
+      "summary": "TypeScript file, 12 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [
+        {
+          "specifier": "crypto",
+          "resolvedPath": null,
+          "isDynamic": false
+        }
+      ],
+      "contentHash": "1790073075bc3713fe4972602db8b8a4221168e9d49d8f1c0868f5eb5c4e14a4"
+    },
+    {
+      "filePath": "src/utils/spinner.ts",
+      "language": "TypeScript",
+      "purpose": "Source file (1 exports)",
+      "exports": [
+        "createSpinner"
+      ],
+      "imports": [
+        "ora"
+      ],
+      "functions": [
+        "createSpinner"
+      ],
+      "dependencies": [
+        "ora"
+      ],
+      "dbAccess": [],
+      "apiUsage": [],
+      "summary": "TypeScript file, 10 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [
+        {
+          "specifier": "ora",
+          "resolvedPath": null,
+          "isDynamic": false
+        }
+      ],
+      "contentHash": "f973073e6e67e21971e8ced392d16effcb6b7bbe8731355e0f4d524b40fc4d54"
+    },
+    {
+      "filePath": "src/writer/contextWriter.ts",
+      "language": "TypeScript",
+      "purpose": "Write generated context to .ai-context/ folder",
+      "exports": [
+        "writeContext"
+      ],
+      "imports": [
+        "fs",
+        "path",
+        "@codecontext/core",
+        "../utils/hash",
+        "../utils/cliVersion"
+      ],
+      "functions": [
+        "buildContextMd",
+        "buildCursorRulesFragment",
+        "buildClaudeMemoryMd",
+        "writeContext"
+      ],
+      "dependencies": [
+        "fs",
+        "path",
+        "@codecontext/core"
+      ],
+      "dbAccess": [],
+      "apiUsage": [],
+      "summary": "TypeScript file, 143 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [
+        {
+          "specifier": "fs",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "path",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "@codecontext/core",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "../utils/hash",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "../utils/cliVersion",
+          "resolvedPath": null,
+          "isDynamic": false
+        }
+      ],
+      "contentHash": "e376c20c7c3d4768d50c64f70a50516eb0d7978a3330f822fed54a17c00a3064"
+    },
+    {
+      "filePath": "test/integration/generate.test.ts",
+      "language": "TypeScript",
+      "purpose": "Source file (0 exports)",
+      "exports": [],
+      "imports": [
+        "vitest",
+        "child_process",
+        "fs",
+        "path"
+      ],
+      "functions": [],
+      "dependencies": [
+        "vitest",
+        "child_process",
+        "fs",
+        "path"
+      ],
+      "dbAccess": [],
+      "apiUsage": [],
+      "summary": "TypeScript file, 42 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [
+        {
+          "specifier": "vitest",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "child_process",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "fs",
+          "resolvedPath": null,
+          "isDynamic": false
+        },
+        {
+          "specifier": "path",
+          "resolvedPath": null,
+          "isDynamic": false
+        }
+      ],
+      "contentHash": "21a9f1463bea74c870bff217c1e17653bddda04cd773ac2c678180dc58a32dfb"
+    },
+    {
+      "filePath": "vitest.config.cjs",
+      "language": "JavaScript",
+      "purpose": "@type {import('vitest/config').UserConfig}",
+      "exports": [],
+      "imports": [
+        "vitest/config"
+      ],
+      "functions": [],
+      "dependencies": [
+        "vitest"
+      ],
+      "dbAccess": [],
+      "apiUsage": [],
+      "summary": "JavaScript file, 9 lines",
+      "diagnostics": [
+        "tree-sitter:typescript:ok"
+      ],
+      "importRecords": [
+        {
+          "specifier": "vitest/config",
+          "resolvedPath": null,
+          "isDynamic": true
+        }
+      ],
+      "contentHash": "73e9e2effde0f0ebe8704fcdc610e6cc8d0e2737271581008da70a832900aeb0"
+    }
+  ],
+  "graph": {
+    "version": "1",
+    "generatedAt": "2026-04-18T19:23:01.288Z",
+    "nodes": [
+      {
+        "id": "fixtures_minimal_src_bar_ts",
+        "type": "file",
+        "label": "fixtures/minimal/src/bar.ts",
+        "filePath": "fixtures/minimal/src/bar.ts",
+        "metadata": {
+          "file": {
+            "filePath": "fixtures/minimal/src/bar.ts",
+            "language": "TypeScript",
+            "purpose": "Source file (1 exports)",
+            "exports": [
+              "bar"
+            ],
+            "imports": [],
+            "functions": [
+              "bar"
+            ],
+            "dependencies": [],
+            "dbAccess": [],
+            "apiUsage": [],
+            "summary": "TypeScript file, 4 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [],
+            "contentHash": "8a58a602dbe9b39f0e72f0c5b942ff9feacbc3718bd5e8b189c712a7e6f8c061"
+          }
+        }
+      },
+      {
+        "id": "fixtures_minimal_src_foo_ts",
+        "type": "file",
+        "label": "fixtures/minimal/src/foo.ts",
+        "filePath": "fixtures/minimal/src/foo.ts",
+        "metadata": {
+          "file": {
+            "filePath": "fixtures/minimal/src/foo.ts",
+            "language": "TypeScript",
+            "purpose": "Source file (1 exports)",
+            "exports": [
+              "foo"
+            ],
+            "imports": [
+              "./bar"
+            ],
+            "functions": [
+              "foo"
+            ],
+            "dependencies": [],
+            "dbAccess": [],
+            "apiUsage": [],
+            "summary": "TypeScript file, 6 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [
+              {
+                "specifier": "./bar",
+                "resolvedPath": null,
+                "isDynamic": false
+              }
+            ],
+            "contentHash": "e3e676c9a1e3852a8228d7a111b21ed58269538b915a3995d7ba9aa02cbed6fd"
+          }
+        }
+      },
+      {
+        "id": "src_commands_dashboard_ts",
+        "type": "file",
+        "label": "src/commands/dashboard.ts",
+        "filePath": "src/commands/dashboard.ts",
+        "metadata": {
+          "file": {
+            "filePath": "src/commands/dashboard.ts",
+            "language": "TypeScript",
+            "purpose": "ignore",
+            "exports": [],
+            "imports": [
+              "commander",
+              "chalk",
+              "child_process",
+              "fs",
+              "path"
+            ],
+            "functions": [
+              "findWorkspaceRoot",
+              "resolveDashboardDir",
+              "openUrl"
+            ],
+            "dependencies": [
+              "commander",
+              "chalk",
+              "child_process",
+              "fs",
+              "path"
+            ],
+            "dbAccess": [],
+            "apiUsage": [],
+            "summary": "TypeScript file, 90 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [
+              {
+                "specifier": "commander",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "chalk",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "child_process",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "fs",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "path",
+                "resolvedPath": null,
+                "isDynamic": false
+              }
+            ],
+            "contentHash": "1f5db0ca22e85e1e7860bd00f6e1aa1cc8bb1fc50182b98c547dbe58fa26b7df"
+          }
+        }
+      },
+      {
+        "id": "src_commands_generate_ts",
+        "type": "file",
+        "label": "src/commands/generate.ts",
+        "filePath": "src/commands/generate.ts",
+        "metadata": {
+          "file": {
+            "filePath": "src/commands/generate.ts",
+            "language": "TypeScript",
+            "purpose": "Source file (0 exports)",
+            "exports": [],
+            "imports": [
+              "commander",
+              "chalk",
+              "path",
+              "../utils/spinner",
+              "../pipeline/runGenerate"
+            ],
+            "functions": [],
+            "dependencies": [
+              "commander",
+              "chalk",
+              "path"
+            ],
+            "dbAccess": [],
+            "apiUsage": [],
+            "summary": "TypeScript file, 65 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [
+              {
+                "specifier": "commander",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "chalk",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "path",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "../utils/spinner",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "../pipeline/runGenerate",
+                "resolvedPath": null,
+                "isDynamic": false
+              }
+            ],
+            "contentHash": "f9d5e8892b28d723cf4c7c4c7954e71310f78efed061ab61da3ef035357625c5"
+          }
+        }
+      },
+      {
+        "id": "src_commands_init_ts",
+        "type": "file",
+        "label": "src/commands/init.ts",
+        "filePath": "src/commands/init.ts",
+        "metadata": {
+          "file": {
+            "filePath": "src/commands/init.ts",
+            "language": "TypeScript",
+            "purpose": "Source file (0 exports)",
+            "exports": [],
+            "imports": [
+              "commander",
+              "chalk",
+              "../utils/spinner",
+              "fs",
+              "path",
+              "@codecontext/core"
+            ],
+            "functions": [],
+            "dependencies": [
+              "commander",
+              "chalk",
+              "fs",
+              "path",
+              "@codecontext/core"
+            ],
+            "dbAccess": [],
+            "apiUsage": [],
+            "summary": "TypeScript file, 64 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [
+              {
+                "specifier": "commander",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "chalk",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "../utils/spinner",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "fs",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "path",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "@codecontext/core",
+                "resolvedPath": null,
+                "isDynamic": false
+              }
+            ],
+            "contentHash": "5e68debf7b2542b9943d4afe461255db089b25c3d57731b056ac1f907172f199"
+          }
+        }
+      },
+      {
+        "id": "src_commands_prompt_ts",
+        "type": "file",
+        "label": "src/commands/prompt.ts",
+        "filePath": "src/commands/prompt.ts",
+        "metadata": {
+          "file": {
+            "filePath": "src/commands/prompt.ts",
+            "language": "TypeScript",
+            "purpose": "Source file (0 exports)",
+            "exports": [],
+            "imports": [
+              "commander"
+            ],
+            "functions": [],
+            "dependencies": [
+              "commander"
+            ],
+            "dbAccess": [],
+            "apiUsage": [],
+            "summary": "TypeScript file, 10 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [
+              {
+                "specifier": "commander",
+                "resolvedPath": null,
+                "isDynamic": false
+              }
+            ],
+            "contentHash": "e894c3ce0b2032c3e82b0b4bd243d85f7054a35017381c6886b55e9f474ce954"
+          }
+        }
+      },
+      {
+        "id": "src_commands_query_ts",
+        "type": "file",
+        "label": "src/commands/query.ts",
+        "filePath": "src/commands/query.ts",
+        "metadata": {
+          "file": {
+            "filePath": "src/commands/query.ts",
+            "language": "TypeScript",
+            "purpose": "Source file (0 exports)",
+            "exports": [],
+            "imports": [
+              "commander",
+              "chalk",
+              "fs",
+              "path",
+              "@codecontext/core"
+            ],
+            "functions": [],
+            "dependencies": [
+              "commander",
+              "chalk",
+              "fs",
+              "path",
+              "@codecontext/core"
+            ],
+            "dbAccess": [],
+            "apiUsage": [],
+            "summary": "TypeScript file, 45 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [
+              {
+                "specifier": "commander",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "chalk",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "fs",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "path",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "@codecontext/core",
+                "resolvedPath": null,
+                "isDynamic": false
+              }
+            ],
+            "contentHash": "bd3420732137576ef08353d23f67a33913b7c4c65d76edb3e7bfaf2bb273761a"
+          }
+        }
+      },
+      {
+        "id": "src_commands_stats_ts",
+        "type": "file",
+        "label": "src/commands/stats.ts",
+        "filePath": "src/commands/stats.ts",
+        "metadata": {
+          "file": {
+            "filePath": "src/commands/stats.ts",
+            "language": "TypeScript",
+            "purpose": "Source file (0 exports)",
+            "exports": [],
+            "imports": [
+              "commander",
+              "chalk",
+              "fs",
+              "path",
+              "@codecontext/core",
+              "../summarizer/llmSummarizer"
+            ],
+            "functions": [],
+            "dependencies": [
+              "commander",
+              "chalk",
+              "fs",
+              "path",
+              "@codecontext/core"
+            ],
+            "dbAccess": [],
+            "apiUsage": [],
+            "summary": "TypeScript file, 35 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [
+              {
+                "specifier": "commander",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "chalk",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "fs",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "path",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "@codecontext/core",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "../summarizer/llmSummarizer",
+                "resolvedPath": null,
+                "isDynamic": false
+              }
+            ],
+            "contentHash": "fbb5158c28c55a7fe9970c96ffec5bb14ec8083c401626c3501a799ff65fcefb"
+          }
+        }
+      },
+      {
+        "id": "src_commands_update_ts",
+        "type": "file",
+        "label": "src/commands/update.ts",
+        "filePath": "src/commands/update.ts",
+        "metadata": {
+          "file": {
+            "filePath": "src/commands/update.ts",
+            "language": "TypeScript",
+            "purpose": "Source file (0 exports)",
+            "exports": [],
+            "imports": [
+              "commander",
+              "chalk",
+              "path",
+              "../utils/spinner",
+              "../pipeline/runGenerate"
+            ],
+            "functions": [],
+            "dependencies": [
+              "commander",
+              "chalk",
+              "path"
+            ],
+            "dbAccess": [
+              "raw_sql"
+            ],
+            "apiUsage": [],
+            "summary": "TypeScript file, 34 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [
+              {
+                "specifier": "commander",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "chalk",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "path",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "../utils/spinner",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "../pipeline/runGenerate",
+                "resolvedPath": null,
+                "isDynamic": false
+              }
+            ],
+            "contentHash": "7c3be9cf14c423a26f7225dbb0a427c68bd3e8bc6d697f1c39ea38a36c10d9ac"
+          }
+        }
+      },
+      {
+        "id": "src_config_loadconfig_ts",
+        "type": "file",
+        "label": "src/config/loadConfig.ts",
+        "filePath": "src/config/loadConfig.ts",
+        "metadata": {
+          "file": {
+            "filePath": "src/config/loadConfig.ts",
+            "language": "TypeScript",
+            "purpose": "Source file (1 exports)",
+            "exports": [
+              "loadProjectConfig"
+            ],
+            "imports": [
+              "fs",
+              "path",
+              "@codecontext/core"
+            ],
+            "functions": [
+              "loadProjectConfig",
+              "deepMerge"
+            ],
+            "dependencies": [
+              "fs",
+              "path",
+              "@codecontext/core"
+            ],
+            "dbAccess": [],
+            "apiUsage": [],
+            "summary": "TypeScript file, 39 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [
+              {
+                "specifier": "fs",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "path",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "@codecontext/core",
+                "resolvedPath": null,
+                "isDynamic": false
+              }
+            ],
+            "contentHash": "5826de65134e612e21d1dd67c42d9ee379076c9553dd347263289b08265057d8"
+          }
+        }
+      },
+      {
+        "id": "src_graph_graphbuilder_ts",
+        "type": "file",
+        "label": "src/graph/graphBuilder.ts",
+        "filePath": "src/graph/graphBuilder.ts",
+        "metadata": {
+          "file": {
+            "filePath": "src/graph/graphBuilder.ts",
+            "language": "TypeScript",
+            "purpose": "Build dependency graph from file contexts and resolved import map.",
+            "exports": [
+              "buildDependencyGraph"
+            ],
+            "imports": [
+              "@codecontext/core",
+              "../parser/dependencyMapper"
+            ],
+            "functions": [
+              "detectCycles",
+              "moduleLabelForPath",
+              "buildDependencyGraph"
+            ],
+            "dependencies": [
+              "@codecontext/core"
+            ],
+            "dbAccess": [],
+            "apiUsage": [],
+            "summary": "TypeScript file, 164 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [
+              {
+                "specifier": "@codecontext/core",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "../parser/dependencyMapper",
+                "resolvedPath": null,
+                "isDynamic": false
+              }
+            ],
+            "contentHash": "b44b7de2ea8807dc6a738a0a9d3d96d8d0416131db4874443fbaafbae54445e5"
+          }
+        }
+      },
+      {
+        "id": "src_index_ts",
+        "type": "file",
+        "label": "src/index.ts",
+        "filePath": "src/index.ts",
+        "metadata": {
+          "file": {
+            "filePath": "src/index.ts",
+            "language": "TypeScript",
+            "purpose": "Source file (0 exports)",
+            "exports": [],
+            "imports": [
+              "commander",
+              "./commands/init",
+              "./commands/generate",
+              "./commands/query",
+              "./commands/update",
+              "./commands/stats",
+              "./commands/dashboard",
+              "./commands/prompt"
+            ],
+            "functions": [],
+            "dependencies": [
+              "commander"
+            ],
+            "dbAccess": [
+              "raw_sql"
+            ],
+            "apiUsage": [],
+            "summary": "TypeScript file, 32 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [
+              {
+                "specifier": "commander",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "./commands/init",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "./commands/generate",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "./commands/query",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "./commands/update",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "./commands/stats",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "./commands/dashboard",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "./commands/prompt",
+                "resolvedPath": null,
+                "isDynamic": false
+              }
+            ],
+            "contentHash": "66f4491e80f622341e2f3f1459d89c0b32375cb527c9c83aabde9a96c74a4c8f"
+          }
+        }
+      },
+      {
+        "id": "src_parser_astparser_ts",
+        "type": "file",
+        "label": "src/parser/astParser.ts",
+        "filePath": "src/parser/astParser.ts",
+        "metadata": {
+          "file": {
+            "filePath": "src/parser/astParser.ts",
+            "language": "TypeScript",
+            "purpose": "Source file (1 exports)",
+            "exports": [
+              "parseFilesAST"
+            ],
+            "imports": [
+              "fs",
+              "path",
+              "@codecontext/core",
+              "../utils/hash",
+              "./heuristics",
+              "./regexExtract",
+              "./treeSitterOptional"
+            ],
+            "functions": [
+              "firstCommentPurpose",
+              "buildImportRecords",
+              "parseFilesAST"
+            ],
+            "dependencies": [
+              "fs",
+              "path",
+              "@codecontext/core"
+            ],
+            "dbAccess": [],
+            "apiUsage": [],
+            "summary": "TypeScript file, 142 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [
+              {
+                "specifier": "fs",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "path",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "@codecontext/core",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "../utils/hash",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "./heuristics",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "./regexExtract",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "./treeSitterOptional",
+                "resolvedPath": null,
+                "isDynamic": false
+              }
+            ],
+            "contentHash": "47f1a0470ff23419e0ae77bcc4ce9a149371ce7b845a83198fa84d950fdea2cd"
+          }
+        }
+      },
+      {
+        "id": "src_parser_dependencymapper_ts",
+        "type": "file",
+        "label": "src/parser/dependencyMapper.ts",
+        "filePath": "src/parser/dependencyMapper.ts",
+        "metadata": {
+          "file": {
+            "filePath": "src/parser/dependencyMapper.ts",
+            "language": "TypeScript",
+            "purpose": "missing",
+            "exports": [
+              "mapDependencies"
+            ],
+            "imports": [
+              "@codecontext/core",
+              "fs",
+              "path",
+              "tsconfig-paths"
+            ],
+            "functions": [
+              "probeFile",
+              "resolveRelative",
+              "isBareOrPackage",
+              "mapDependencies"
+            ],
+            "dependencies": [
+              "@codecontext/core",
+              "fs",
+              "path",
+              "tsconfig-paths"
+            ],
+            "dbAccess": [],
+            "apiUsage": [],
+            "summary": "TypeScript file, 164 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [
+              {
+                "specifier": "@codecontext/core",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "fs",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "path",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "tsconfig-paths",
+                "resolvedPath": null,
+                "isDynamic": false
+              }
+            ],
+            "contentHash": "1df97852fcf92c3c3796a2839543364725c1e2207f8e52ed1945a5d66c0d12af"
+          }
+        }
+      },
+      {
+        "id": "src_parser_filescanner_ts",
+        "type": "file",
+        "label": "src/parser/fileScanner.ts",
+        "filePath": "src/parser/fileScanner.ts",
+        "metadata": {
+          "file": {
+            "filePath": "src/parser/fileScanner.ts",
+            "language": "TypeScript",
+            "purpose": "Recursively scan directory and return source file paths (absolute).",
+            "exports": [
+              "scanFiles"
+            ],
+            "imports": [
+              "fs",
+              "path",
+              "ignore"
+            ],
+            "functions": [
+              "loadGitignoreMatchers",
+              "isSourceFile",
+              "scanFiles",
+              "walkDir"
+            ],
+            "dependencies": [
+              "fs",
+              "path",
+              "ignore"
+            ],
+            "dbAccess": [],
+            "apiUsage": [],
+            "summary": "TypeScript file, 101 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [
+              {
+                "specifier": "fs",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "path",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "ignore",
+                "resolvedPath": null,
+                "isDynamic": false
+              }
+            ],
+            "contentHash": "c71ad95dfd8846293dcb4db1477acf5848a62fcb2791b1e576ec2233e2c16165"
+          }
+        }
+      },
+      {
+        "id": "src_parser_heuristics_ts",
+        "type": "file",
+        "label": "src/parser/heuristics.ts",
+        "filePath": "src/parser/heuristics.ts",
+        "metadata": {
+          "file": {
+            "filePath": "src/parser/heuristics.ts",
+            "language": "TypeScript",
+            "purpose": "DB / API hints from source text (complements AST where available)",
+            "exports": [
+              "detectDbAccess",
+              "detectApiUsage"
+            ],
+            "imports": [],
+            "functions": [
+              "detectDbAccess",
+              "detectApiUsage"
+            ],
+            "dependencies": [],
+            "dbAccess": [
+              "sequelize",
+              "typeorm",
+              "sqlalchemy",
+              "database/sql",
+              "raw_sql"
+            ],
+            "apiUsage": [
+              "express",
+              "fastapi",
+              "flask"
+            ],
+            "summary": "TypeScript file, 42 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [],
+            "contentHash": "642f87922e2391b7cf9a8c6465d14f0bb1344119e0e332c8929608c89b13aa45"
+          }
+        }
+      },
+      {
+        "id": "src_parser_regexextract_test_ts",
+        "type": "file",
+        "label": "src/parser/regexExtract.test.ts",
+        "filePath": "src/parser/regexExtract.test.ts",
+        "metadata": {
+          "file": {
+            "filePath": "src/parser/regexExtract.test.ts",
+            "language": "TypeScript",
+            "purpose": "Source file (1 exports)",
+            "exports": [
+              "hello"
+            ],
+            "imports": [
+              "vitest",
+              "./regexExtract",
+              "lodash"
+            ],
+            "functions": [
+              "hello"
+            ],
+            "dependencies": [
+              "vitest",
+              "lodash"
+            ],
+            "dbAccess": [],
+            "apiUsage": [],
+            "summary": "TypeScript file, 15 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [
+              {
+                "specifier": "vitest",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "./regexExtract",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "lodash",
+                "resolvedPath": null,
+                "isDynamic": false
+              }
+            ],
+            "contentHash": "dc68394e09c322d49a954d3f1856553a79e2f6f432c4ff247daae2f6d05276d6"
+          }
+        }
+      },
+      {
+        "id": "src_parser_regexextract_ts",
+        "type": "file",
+        "label": "src/parser/regexExtract.ts",
+        "filePath": "src/parser/regexExtract.ts",
+        "metadata": {
+          "file": {
+            "filePath": "src/parser/regexExtract.ts",
+            "language": "TypeScript",
+            "purpose": "Portable extraction when Tree-sitter is unavailable or as supplement.",
+            "exports": [
+              "extractJsTsLike",
+              "extractPython",
+              "extractGo"
+            ],
+            "imports": [],
+            "functions": [
+              "npmPackageName",
+              "extractJsTsLike",
+              "extractPython",
+              "extractGo",
+              "pushImp"
+            ],
+            "dependencies": [],
+            "dbAccess": [],
+            "apiUsage": [],
+            "summary": "TypeScript file, 176 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [],
+            "contentHash": "9a5fda9d24153fa84174b9c83642e2b896293ce3b63149dd3520ce544c0541ff"
+          }
+        }
+      },
+      {
+        "id": "src_parser_treesitteroptional_ts",
+        "type": "file",
+        "label": "src/parser/treeSitterOptional.ts",
+        "filePath": "src/parser/treeSitterOptional.ts",
+        "metadata": {
+          "file": {
+            "filePath": "src/parser/treeSitterOptional.ts",
+            "language": "TypeScript",
+            "purpose": "Optional Tree-sitter parse (native bindings). Validates grammars load; extraction uses regex.",
+            "exports": [
+              "tryParseWithTreeSitter",
+              "tryParsePythonTreeSitter",
+              "tryParseGoTreeSitter"
+            ],
+            "imports": [
+              "tree-sitter",
+              "tree-sitter-typescript",
+              "tree-sitter-python",
+              "tree-sitter-go"
+            ],
+            "functions": [
+              "tryParseWithTreeSitter",
+              "tryParsePythonTreeSitter",
+              "tryParseGoTreeSitter"
+            ],
+            "dependencies": [
+              "tree-sitter",
+              "tree-sitter-typescript",
+              "tree-sitter-python",
+              "tree-sitter-go"
+            ],
+            "dbAccess": [],
+            "apiUsage": [],
+            "summary": "TypeScript file, 58 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [
+              {
+                "specifier": "tree-sitter",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "tree-sitter-typescript",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "tree-sitter-python",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "tree-sitter-go",
+                "resolvedPath": null,
+                "isDynamic": false
+              }
+            ],
+            "contentHash": "b5383c25d9fe083ec9ab8fb53ea64e1c3b17ebcf6332c934f83056fa50b33070"
+          }
+        }
+      },
+      {
+        "id": "src_pipeline_rungenerate_ts",
+        "type": "file",
+        "label": "src/pipeline/runGenerate.ts",
+        "filePath": "src/pipeline/runGenerate.ts",
+        "metadata": {
+          "file": {
+            "filePath": "src/pipeline/runGenerate.ts",
+            "language": "TypeScript",
+            "purpose": "Source file (1 exports)",
+            "exports": [
+              "runGenerate"
+            ],
+            "imports": [
+              "fs",
+              "path",
+              "../parser/fileScanner",
+              "../parser/astParser",
+              "../parser/dependencyMapper",
+              "../graph/graphBuilder",
+              "../writer/contextWriter",
+              "../config/loadConfig",
+              "../summarizer/llmSummarizer"
+            ],
+            "functions": [
+              "runGenerate",
+              "readContent"
+            ],
+            "dependencies": [
+              "fs",
+              "path"
+            ],
+            "dbAccess": [],
+            "apiUsage": [],
+            "summary": "TypeScript file, 86 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [
+              {
+                "specifier": "fs",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "path",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "../parser/fileScanner",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "../parser/astParser",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "../parser/dependencyMapper",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "../graph/graphBuilder",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "../writer/contextWriter",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "../config/loadConfig",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "../summarizer/llmSummarizer",
+                "resolvedPath": null,
+                "isDynamic": false
+              }
+            ],
+            "contentHash": "b4626245ee93ff839be201d6a75a3edb39365b9c9cc79963fcfe5a5227e37155"
+          }
+        }
+      },
+      {
+        "id": "src_summarizer_llmsummarizer_ts",
+        "type": "file",
+        "label": "src/summarizer/llmSummarizer.ts",
+        "filePath": "src/summarizer/llmSummarizer.ts",
+        "metadata": {
+          "file": {
+            "filePath": "src/summarizer/llmSummarizer.ts",
+            "language": "TypeScript",
+            "purpose": "Rough USD estimate (order-of-magnitude; update with current pricing).",
+            "exports": [
+              "estimateCostUsd",
+              "summarizeFileContext",
+              "summarizeFiles"
+            ],
+            "imports": [
+              "@anthropic-ai/sdk",
+              "openai",
+              "fs",
+              "path",
+              "zod",
+              "@codecontext/core",
+              "../utils/hash"
+            ],
+            "functions": [
+              "loadCache",
+              "saveCache",
+              "cacheKey",
+              "estimateCostUsd",
+              "callAnthropic",
+              "callOpenAI",
+              "buildUserPayload",
+              "parseJsonLoose",
+              "summarizeFileContext",
+              "summarizeFiles"
+            ],
+            "dependencies": [
+              "@anthropic-ai/sdk",
+              "openai",
+              "fs",
+              "path",
+              "zod",
+              "@codecontext/core"
+            ],
+            "dbAccess": [
+              "raw_sql"
+            ],
+            "apiUsage": [],
+            "summary": "TypeScript file, 281 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [
+              {
+                "specifier": "@anthropic-ai/sdk",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "openai",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "fs",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "path",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "zod",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "@codecontext/core",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "../utils/hash",
+                "resolvedPath": null,
+                "isDynamic": false
+              }
+            ],
+            "contentHash": "da2cdfec406ea0feebae1c979f2b3e475070ff994345d309a0476dfca147ac34"
+          }
+        }
+      },
+      {
+        "id": "src_utils_cliversion_ts",
+        "type": "file",
+        "label": "src/utils/cliVersion.ts",
+        "filePath": "src/utils/cliVersion.ts",
+        "metadata": {
+          "file": {
+            "filePath": "src/utils/cliVersion.ts",
+            "language": "TypeScript",
+            "purpose": "Source file (1 exports)",
+            "exports": [
+              "getCliVersion"
+            ],
+            "imports": [
+              "fs",
+              "path"
+            ],
+            "functions": [
+              "getCliVersion"
+            ],
+            "dependencies": [
+              "fs",
+              "path"
+            ],
+            "dbAccess": [],
+            "apiUsage": [
+              "next_route"
+            ],
+            "summary": "TypeScript file, 13 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [
+              {
+                "specifier": "fs",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "path",
+                "resolvedPath": null,
+                "isDynamic": false
+              }
+            ],
+            "contentHash": "515eca47f4fe21a10185b6b1b4900ab3accd4b3de63e894daa1fd49a443813a3"
+          }
+        }
+      },
+      {
+        "id": "src_utils_hash_ts",
+        "type": "file",
+        "label": "src/utils/hash.ts",
+        "filePath": "src/utils/hash.ts",
+        "metadata": {
+          "file": {
+            "filePath": "src/utils/hash.ts",
+            "language": "TypeScript",
+            "purpose": "Source file (2 exports)",
+            "exports": [
+              "sha256Hex",
+              "fileJsonSlug"
+            ],
+            "imports": [
+              "crypto"
+            ],
+            "functions": [
+              "sha256Hex",
+              "fileJsonSlug"
+            ],
+            "dependencies": [
+              "crypto"
+            ],
+            "dbAccess": [
+              "raw_sql"
+            ],
+            "apiUsage": [],
+            "summary": "TypeScript file, 12 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [
+              {
+                "specifier": "crypto",
+                "resolvedPath": null,
+                "isDynamic": false
+              }
+            ],
+            "contentHash": "1790073075bc3713fe4972602db8b8a4221168e9d49d8f1c0868f5eb5c4e14a4"
+          }
+        }
+      },
+      {
+        "id": "src_utils_spinner_ts",
+        "type": "file",
+        "label": "src/utils/spinner.ts",
+        "filePath": "src/utils/spinner.ts",
+        "metadata": {
+          "file": {
+            "filePath": "src/utils/spinner.ts",
+            "language": "TypeScript",
+            "purpose": "Source file (1 exports)",
+            "exports": [
+              "createSpinner"
+            ],
+            "imports": [
+              "ora"
+            ],
+            "functions": [
+              "createSpinner"
+            ],
+            "dependencies": [
+              "ora"
+            ],
+            "dbAccess": [],
+            "apiUsage": [],
+            "summary": "TypeScript file, 10 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [
+              {
+                "specifier": "ora",
+                "resolvedPath": null,
+                "isDynamic": false
+              }
+            ],
+            "contentHash": "f973073e6e67e21971e8ced392d16effcb6b7bbe8731355e0f4d524b40fc4d54"
+          }
+        }
+      },
+      {
+        "id": "src_writer_contextwriter_ts",
+        "type": "file",
+        "label": "src/writer/contextWriter.ts",
+        "filePath": "src/writer/contextWriter.ts",
+        "metadata": {
+          "file": {
+            "filePath": "src/writer/contextWriter.ts",
+            "language": "TypeScript",
+            "purpose": "Write generated context to .ai-context/ folder",
+            "exports": [
+              "writeContext"
+            ],
+            "imports": [
+              "fs",
+              "path",
+              "@codecontext/core",
+              "../utils/hash",
+              "../utils/cliVersion"
+            ],
+            "functions": [
+              "buildContextMd",
+              "buildCursorRulesFragment",
+              "buildClaudeMemoryMd",
+              "writeContext"
+            ],
+            "dependencies": [
+              "fs",
+              "path",
+              "@codecontext/core"
+            ],
+            "dbAccess": [],
+            "apiUsage": [],
+            "summary": "TypeScript file, 143 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [
+              {
+                "specifier": "fs",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "path",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "@codecontext/core",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "../utils/hash",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "../utils/cliVersion",
+                "resolvedPath": null,
+                "isDynamic": false
+              }
+            ],
+            "contentHash": "e376c20c7c3d4768d50c64f70a50516eb0d7978a3330f822fed54a17c00a3064"
+          }
+        }
+      },
+      {
+        "id": "test_integration_generate_test_ts",
+        "type": "file",
+        "label": "test/integration/generate.test.ts",
+        "filePath": "test/integration/generate.test.ts",
+        "metadata": {
+          "file": {
+            "filePath": "test/integration/generate.test.ts",
+            "language": "TypeScript",
+            "purpose": "Source file (0 exports)",
+            "exports": [],
+            "imports": [
+              "vitest",
+              "child_process",
+              "fs",
+              "path"
+            ],
+            "functions": [],
+            "dependencies": [
+              "vitest",
+              "child_process",
+              "fs",
+              "path"
+            ],
+            "dbAccess": [],
+            "apiUsage": [],
+            "summary": "TypeScript file, 42 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [
+              {
+                "specifier": "vitest",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "child_process",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "fs",
+                "resolvedPath": null,
+                "isDynamic": false
+              },
+              {
+                "specifier": "path",
+                "resolvedPath": null,
+                "isDynamic": false
+              }
+            ],
+            "contentHash": "21a9f1463bea74c870bff217c1e17653bddda04cd773ac2c678180dc58a32dfb"
+          }
+        }
+      },
+      {
+        "id": "vitest_config_cjs",
+        "type": "file",
+        "label": "vitest.config.cjs",
+        "filePath": "vitest.config.cjs",
+        "metadata": {
+          "file": {
+            "filePath": "vitest.config.cjs",
+            "language": "JavaScript",
+            "purpose": "@type {import('vitest/config').UserConfig}",
+            "exports": [],
+            "imports": [
+              "vitest/config"
+            ],
+            "functions": [],
+            "dependencies": [
+              "vitest"
+            ],
+            "dbAccess": [],
+            "apiUsage": [],
+            "summary": "JavaScript file, 9 lines",
+            "diagnostics": [
+              "tree-sitter:typescript:ok"
+            ],
+            "importRecords": [
+              {
+                "specifier": "vitest/config",
+                "resolvedPath": null,
+                "isDynamic": true
+              }
+            ],
+            "contentHash": "73e9e2effde0f0ebe8704fcdc610e6cc8d0e2737271581008da70a832900aeb0"
+          }
+        }
+      },
+      {
+        "id": "db_raw_sql",
+        "type": "db",
+        "label": "raw_sql",
+        "metadata": {
+          "dbHint": "raw_sql"
+        }
+      },
+      {
+        "id": "db_sequelize",
+        "type": "db",
+        "label": "sequelize",
+        "metadata": {
+          "dbHint": "sequelize"
+        }
+      },
+      {
+        "id": "db_typeorm",
+        "type": "db",
+        "label": "typeorm",
+        "metadata": {
+          "dbHint": "typeorm"
+        }
+      },
+      {
+        "id": "db_sqlalchemy",
+        "type": "db",
+        "label": "sqlalchemy",
+        "metadata": {
+          "dbHint": "sqlalchemy"
+        }
+      },
+      {
+        "id": "db_database_sql",
+        "type": "db",
+        "label": "database/sql",
+        "metadata": {
+          "dbHint": "database/sql"
+        }
+      },
+      {
+        "id": "api_express",
+        "type": "api",
+        "label": "express",
+        "metadata": {
+          "apiPath": "express"
+        }
+      },
+      {
+        "id": "api_fastapi",
+        "type": "api",
+        "label": "fastapi",
+        "metadata": {
+          "apiPath": "fastapi"
+        }
+      },
+      {
+        "id": "api_flask",
+        "type": "api",
+        "label": "flask",
+        "metadata": {
+          "apiPath": "flask"
+        }
+      },
+      {
+        "id": "api_next_route",
+        "type": "api",
+        "label": "next_route",
+        "metadata": {
+          "apiPath": "next_route"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "source": "fixtures_minimal_src_foo_ts",
+        "target": "fixtures_minimal_src_bar_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_commands_generate_ts",
+        "target": "src_utils_spinner_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_commands_generate_ts",
+        "target": "src_pipeline_rungenerate_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_commands_init_ts",
+        "target": "src_utils_spinner_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_commands_stats_ts",
+        "target": "src_summarizer_llmsummarizer_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_commands_update_ts",
+        "target": "src_utils_spinner_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_commands_update_ts",
+        "target": "src_pipeline_rungenerate_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_graph_graphbuilder_ts",
+        "target": "src_parser_dependencymapper_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_index_ts",
+        "target": "src_commands_init_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_index_ts",
+        "target": "src_commands_generate_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_index_ts",
+        "target": "src_commands_query_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_index_ts",
+        "target": "src_commands_update_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_index_ts",
+        "target": "src_commands_stats_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_index_ts",
+        "target": "src_commands_dashboard_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_index_ts",
+        "target": "src_commands_prompt_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_parser_astparser_ts",
+        "target": "src_utils_hash_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_parser_astparser_ts",
+        "target": "src_parser_heuristics_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_parser_astparser_ts",
+        "target": "src_parser_regexextract_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_parser_astparser_ts",
+        "target": "src_parser_treesitteroptional_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_parser_regexextract_test_ts",
+        "target": "src_parser_regexextract_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_pipeline_rungenerate_ts",
+        "target": "src_parser_filescanner_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_pipeline_rungenerate_ts",
+        "target": "src_parser_astparser_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_pipeline_rungenerate_ts",
+        "target": "src_parser_dependencymapper_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_pipeline_rungenerate_ts",
+        "target": "src_graph_graphbuilder_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_pipeline_rungenerate_ts",
+        "target": "src_writer_contextwriter_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_pipeline_rungenerate_ts",
+        "target": "src_config_loadconfig_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_pipeline_rungenerate_ts",
+        "target": "src_summarizer_llmsummarizer_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_summarizer_llmsummarizer_ts",
+        "target": "src_utils_hash_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_writer_contextwriter_ts",
+        "target": "src_utils_hash_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_writer_contextwriter_ts",
+        "target": "src_utils_cliversion_ts",
+        "relation": "imports"
+      },
+      {
+        "source": "src_commands_update_ts",
+        "target": "db_raw_sql",
+        "relation": "reads_from"
+      },
+      {
+        "source": "src_index_ts",
+        "target": "db_raw_sql",
+        "relation": "reads_from"
+      },
+      {
+        "source": "src_parser_heuristics_ts",
+        "target": "db_sequelize",
+        "relation": "reads_from"
+      },
+      {
+        "source": "src_parser_heuristics_ts",
+        "target": "db_typeorm",
+        "relation": "reads_from"
+      },
+      {
+        "source": "src_parser_heuristics_ts",
+        "target": "db_sqlalchemy",
+        "relation": "reads_from"
+      },
+      {
+        "source": "src_parser_heuristics_ts",
+        "target": "db_database_sql",
+        "relation": "reads_from"
+      },
+      {
+        "source": "src_parser_heuristics_ts",
+        "target": "db_raw_sql",
+        "relation": "reads_from"
+      },
+      {
+        "source": "src_parser_heuristics_ts",
+        "target": "api_express",
+        "relation": "calls"
+      },
+      {
+        "source": "src_parser_heuristics_ts",
+        "target": "api_fastapi",
+        "relation": "calls"
+      },
+      {
+        "source": "src_parser_heuristics_ts",
+        "target": "api_flask",
+        "relation": "calls"
+      },
+      {
+        "source": "src_summarizer_llmsummarizer_ts",
+        "target": "db_raw_sql",
+        "relation": "reads_from"
+      },
+      {
+        "source": "src_utils_cliversion_ts",
+        "target": "api_next_route",
+        "relation": "calls"
+      },
+      {
+        "source": "src_utils_hash_ts",
+        "target": "db_raw_sql",
+        "relation": "reads_from"
+      }
+    ],
+    "circularDependencyWarnings": []
+  },
+  "warnings": []
+}

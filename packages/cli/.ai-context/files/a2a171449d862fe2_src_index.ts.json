@@ -1,0 +1,71 @@
+{
+  "filePath": "src/index.ts",
+  "language": "TypeScript",
+  "purpose": "Source file (0 exports)",
+  "exports": [],
+  "imports": [
+    "commander",
+    "./commands/init",
+    "./commands/generate",
+    "./commands/query",
+    "./commands/update",
+    "./commands/stats",
+    "./commands/dashboard",
+    "./commands/prompt"
+  ],
+  "functions": [],
+  "dependencies": [
+    "commander"
+  ],
+  "dbAccess": [
+    "raw_sql"
+  ],
+  "apiUsage": [],
+  "summary": "TypeScript file, 32 lines",
+  "diagnostics": [
+    "tree-sitter:typescript:ok"
+  ],
+  "importRecords": [
+    {
+      "specifier": "commander",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "./commands/init",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "./commands/generate",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "./commands/query",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "./commands/update",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "./commands/stats",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "./commands/dashboard",
+      "resolvedPath": null,
+      "isDynamic": false
+    },
+    {
+      "specifier": "./commands/prompt",
+      "resolvedPath": null,
+      "isDynamic": false
+    }
+  ],
+  "contentHash": "66f4491e80f622341e2f3f1459d89c0b32375cb527c9c83aabde9a96c74a4c8f"
+}
