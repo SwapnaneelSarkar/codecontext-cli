@@ -227,6 +227,4 @@ This is a skeleton/template project with stubs for integration work:
 4. Connect dashboard to real project data
 5. Build interactive graph visualization with React Flow
 
-## License
 
-MIT
